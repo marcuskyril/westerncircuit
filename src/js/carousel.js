@@ -3,6 +3,7 @@ require('slick-carousel')
 $(function(){
   $('.carousel').slick({
     dots: true,
+    autoplay: true,
     arrows: true,
     responsive: [
       {

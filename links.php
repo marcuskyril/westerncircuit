@@ -13,7 +13,7 @@
           <h1>Links</h1>
           <ol class="breadcrumb">
             <li>
-              <a href="">Home</a>
+              <a href="/">Home</a>
             </li>
             <li>
               <a href="">Links</a>

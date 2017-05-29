@@ -189,6 +189,10 @@ hr {
 		max-width: 750px;
 		margin: 0 auto;
 	}
+
+	@include grid-media($sm-grid) {
+		padding: 0 20px;
+	}
 }
 
 .captioned-image {

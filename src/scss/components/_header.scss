@@ -1,7 +1,7 @@
 .header-desktop {
 
 	position: relative;
-
+	// height: 190px;
 	padding: 35px 0 0;
 	display: none;
 
@@ -61,7 +61,7 @@
 	li:last-child {
 		margin: 0;
 	}
-	
+
 	.accordion:first-child {
 		.accordion__header {
 			padding: 0;
@@ -95,6 +95,7 @@
 
 .is-sticky {
 	position: fixed;
+	height: 70px;
 	left: 0;
 	right: 0;
 	z-index: 1000;

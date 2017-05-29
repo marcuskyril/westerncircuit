@@ -7072,6 +7072,12 @@ hr {
   }
 }
 
+@media only screen and (min-width: 320px) {
+  .standard-content {
+    padding: 0 20px;
+  }
+}
+
 .captioned-image {
   margin-left: -20px;
   margin-right: -20px;
@@ -7276,8 +7282,8 @@ blockquote {
 }
 
 .countdown {
-  background: linear-gradient(to right, #43cea2, #185a9d);
-  padding: 40px 0;
+  background: linear-gradient(to right, #fff, #222);
+  padding: 50px 0;
 }
 
 .off-canvas-effect main,
@@ -7643,6 +7649,7 @@ textarea {
 
 .is-sticky {
   position: fixed;
+  height: 70px;
   left: 0;
   right: 0;
   z-index: 1000;
@@ -7722,7 +7729,7 @@ textarea {
 }
 
 .nav .active a {
-  color: #ff8c00;
+  color: #d9534f;
 }
 
 .nav .btn {
@@ -7783,7 +7790,7 @@ textarea {
 
 @media only screen and (min-width: 1024px) {
   .mega-menu {
-    top: 182px;
+    top: 194px;
     min-height: 340px;
   }
 }
@@ -8134,7 +8141,7 @@ textarea {
   height: 100%;
   width: 100%;
   padding: 25px 15px;
-  background-color: rgba(240, 248, 255, 0.9);
+  background-color: rgba(223, 227, 238, 0.9);
   color: #333333;
 }
 
@@ -8146,7 +8153,7 @@ textarea {
 
 @media only screen and (min-width: 1024px) {
   .hero__speech {
-    padding: 50px 50px 30px;
+    padding: 100px 50px 30px;
   }
 }
 
@@ -8160,14 +8167,14 @@ textarea {
 @media only screen and (min-width: 768px) {
   .hero__speech:after {
     position: absolute;
-    top: 40px;
+    top: 70px;
     right: -20px;
     bottom: auto;
     left: auto;
     content: '';
     border-style: solid;
     border-width: 20px 0 20px 20px;
-    border-color: transparent rgba(240, 248, 255, 0.9);
+    border-color: transparent rgba(223, 227, 238, 0.9);
   }
 }
 
@@ -8706,7 +8713,7 @@ textarea {
 }
 
 footer {
-  padding: 15px 0;
+  padding: 35px 0 30px;
   background: #222;
   color: #ffffff;
   font-size: 14px;
@@ -8878,7 +8885,7 @@ footer .copyright {
 
 @media only screen and (min-width: 768px) {
   .slick-dots li.slick-active button:before {
-    background-color: #fece20;
+    background-color: #d9534f;
   }
 }
 
@@ -9025,6 +9032,7 @@ footer .copyright {
 
 .tabs {
   padding-top: 25px;
+  text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
@@ -9034,7 +9042,8 @@ footer .copyright {
 }
 
 .tabs li {
-  float: left;
+  float: none;
+  display: inline-block;
   background: #dddddd;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
@@ -9051,7 +9060,7 @@ footer .copyright {
 
 @media only screen and (min-width: 768px) {
   .tabs li a {
-    font-size: 20px;
+    font-size: 18px;
     padding: 12px 30px;
   }
 }
@@ -9064,13 +9073,13 @@ footer .copyright {
 }
 
 .tabs li.active a {
-  font-size: 20px;
+  font-size: 18px;
   color: #444444;
 }
 
 @media only screen and (min-width: 768px) {
   .tabs li.active a {
-    font-size: 22px;
+    font-size: 18px;
   }
 }
 

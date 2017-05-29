@@ -52,7 +52,7 @@
         background-color: #333;
 
 	      @include grid-media($md-grid){
-          background-color: #fece20;
+          background-color: $fuck-yeah-red;
         }
       }
     }

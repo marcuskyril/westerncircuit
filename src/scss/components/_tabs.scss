@@ -1,12 +1,14 @@
 .tabs {
 	padding-top: 25px;
+	text-align: center;
 
 	@include grid-media($md-grid) {
 		padding-top: 45px;
 	}
 
 	li {
-		float: left;
+		float: none;
+		display: inline-block;
 		background: $divider-grey;
 		border-top-left-radius: 8px;
 		border-top-right-radius: 8px;
@@ -20,8 +22,8 @@
 			display: block;
 
 			@include grid-media($md-grid) {
-				font-size: 20px;
-				padding: 12px 30px;	
+				font-size: 18px;
+				padding: 12px 30px;
 			}
 		}
 
@@ -32,15 +34,15 @@
 			border-bottom: none;
 
 			a {
-				font-size: 20px;
+				font-size: 18px;
 				color: $nav-grey;
 
 				@include grid-media($md-grid) {
-					font-size: 22px;
+					font-size: 18px;
 				}
 			}
 		}
-	}	
+	}
 }
 
 .tabs-content {

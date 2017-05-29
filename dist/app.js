@@ -10456,6 +10456,7 @@ __webpack_require__(17);
 $(function () {
   $('.carousel').slick({
     dots: true,
+    autoplay: true,
     arrows: true,
     responsive: [{
       breakpoint: 1024,
@@ -10511,7 +10512,7 @@ var countdown = {
     //   });
 
     $("#countdownTimer").countdown("2017/12/12", function (event) {
-      $(this).text(event.strftime('%D Days %H:%M:%S'));
+      $(this).text(event.strftime('%D DAYS %H HOURS %M MINS %S SECS'));
     });
   }
 };
@@ -13195,8 +13196,10 @@ var stickyMenu = {
 
 			if ($(this).scrollTop() >= offset) {
 				menus.addClass('is-sticky animated slideInDown');
+				$('#countdownTimer').css('display', 'none');
 			} else {
 				menus.removeClass('is-sticky animated slideInDown');
+				$('#countdownTimer').css('display', 'block');
 			}
 		}, 300));
 	},
