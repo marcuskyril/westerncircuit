@@ -1,0 +1,42 @@
+.news-cards {
+	margin: 30px 0;
+
+	.news-row {
+		margin: 0;
+
+		@include grid-media($lg-grid) {
+			margin: 15px 0;
+		}
+
+		.news-item {
+			border: 1px solid $divider-grey;
+			padding: 20px;
+			background: #f3f4f6;
+			box-shadow: 0px 1px 10px 0px rgba(239, 239, 239, 0.7);
+			margin-top: 15px;
+			margin-bottom: 15px;
+
+			@include grid-media($lg-grid) {
+				margin-top: 0;
+				margin-bottom: 0;
+			}
+
+			p {
+				margin: 15px 0;
+				color: $body-copy-grey;
+			}
+
+			a {
+				font-weight: 900;
+				color: $blue;
+
+				&:after {
+					font-family: "FontAwesome";
+					content: '\f061';
+					margin: 0 0 0 6px;
+				}
+			}
+		}
+	}
+		
+}

@@ -1,0 +1,38 @@
+.menu-search {
+	@include grid-container();
+
+	width: 100%;
+
+	@include grid-media($lg-grid) {
+		width: calc(100% - 125px);
+	}
+
+	#{&}__input,
+	#{&}__btn {
+		height: 40px;
+		float: left;
+		font-size: 16px;
+	}
+
+	#{&}__input {
+		width: calc(100% - 45px);
+
+		@include grid-media($lg-grid) {
+			width: calc(100% - 60px);
+		}
+	}
+
+	#{&}__btn {
+		padding: 0 15px;
+		border: 0;
+		outline: 0;
+
+		background: darken($grey--lightest, 5);
+		color: $blue;
+
+		&:hover {
+			cursor: pointer;
+			color: $dark-blue;
+		}
+	}
+}
