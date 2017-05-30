@@ -58,7 +58,10 @@
           </h4>
           <div id="countdownTimer"></div>
         </div>
+        
       </section> -->
+          
+<!--      delete this comment-->
 
   		<?php include('html-includes/footer.html'); ?>
 
