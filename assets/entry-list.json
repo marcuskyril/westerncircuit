@@ -1,0 +1,28 @@
+{
+    "irc A": [{
+        "sailID": "SIN 1912",
+        "yachtName": "Petit Bateau",
+        "skipperName": "Esben Poulsson"
+    }, {
+        "sailID": "SIN 4321",
+        "yachtName": "Zanzibar",
+        "skipperName": "Jonathan Mahony"
+    }, {
+        "sailID": "GBR 1856 L",
+        "yachtName": "Rikki Tikki Tavi",
+        "skipperName": "Chris Furness"
+    }],
+    "irc B": [{
+        "sailID": "GER 408",
+        "yachtName": "Born in Fire",
+        "skipperName": "Pascal Radue"
+    }, {
+        "sailID": "SIN 333",
+        "yachtName": "Waka Tere",
+        "skipperName": "Kurt Metzger"
+    }, {
+        "sailID": "SIN 852",
+        "yachtName": "Shoon Fung Too",
+        "skipperName": "Gordon Maxted"
+    }]
+}
