@@ -10,13 +10,13 @@
   		<?php include('html-includes/navigation.html'); ?>
       <section class="landing__banner-bar">
         <div class="container">
-          <h1>Documentation</h1>
+          <h1>Gallery</h1>
           <ol class="breadcrumb">
             <li>
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="gallery.php">Documentation</a>
+              <a href="gallery.php">Gallery</a>
             </li>
           </ol>
         </div>
