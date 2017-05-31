@@ -8,7 +8,7 @@
   <body>
 	  <div id="app">
 
-  		<?php include('html-includes/navigation.html'); ?>
+  		<?php include('./html-includes/navigation.html'); ?>
 
   		<!-- Hero -->
       <section class="hero carousel">
@@ -58,9 +58,9 @@
           </h4>
           <div id="countdownTimer"></div>
         </div>
-        
+
       </section> -->
-          
+
 <!--      delete this comment-->
 
   		<?php include('html-includes/footer.html'); ?>

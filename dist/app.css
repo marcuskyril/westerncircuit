@@ -3098,6 +3098,12 @@ table {
   clip: auto;
 }
 
+/*-----------------------------------------------------------------------
+ | GRIDS
+ -----------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------
+ | Navigations
+ -----------------------------------------------------------------------*/
 .nice-select {
   -webkit-tap-highlight-color: transparent;
   background-color: #fff;
@@ -7558,6 +7564,14 @@ th {
 .list-group-item-success {
   color: #3c763d;
   background-color: #dff0d8;
+}
+
+.entry {
+  margin-bottom: 30px;
+}
+
+.entry h2 {
+  text-transform: uppercase;
 }
 
 .classic-form__btn-group {
