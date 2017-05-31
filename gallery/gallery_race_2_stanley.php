@@ -19,7 +19,7 @@
               <a href="../gallery.php">Gallery</a>
             </li>
             <li>
-              <a href="#">Gallery Race 1 - Spencer</a>
+              <a href="#">Gallery Race 2 - Stanley</a>
             </li>
           </ol>
         </div>
@@ -27,7 +27,9 @@
 
       <section>
         <div class="standard-content">
-            <iframe src="//embedsocial.com/facebook_album/album_photos/711141202366264" width="100%" height="1500px" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
+            
+            <iframe src="//embedsocial.com/facebook_album/album_photos/710987639048287" width="100%" height="1500" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
+
         </div>
 
       </section>
