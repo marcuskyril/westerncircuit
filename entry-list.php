@@ -24,33 +24,34 @@
 
       <section>
         <div class="standard-content">
-  				<table width="100%">
-            <tbody>
-              <?php
+          <?php
 
-              // $json_string = file_get_contents("./assets/entry-list.json");
-              // $json = json_decode($json_string, true);
-              //
-              // $sailID = 'Sail 123';
-              // $skipperName = 'John Mayer';
-              // $yachtName = 'Search For Everything';
-              //
-              // $test = array('sailID' => $sailID, 'yachtName' => $yachtName, 'skipperName' => $skipperName);
-              // array_push($json['irc A'], $test);
-              // $edited_json = json_encode($json);
-              // file_put_contents('./assets/entry-list.json', $edited_json);
+          // $json_string = file_get_contents("./assets/entry-list.json");
+          // $json = json_decode($json_string, true);
+          //
+          // $sailID = 'Sail 123';
+          // $skipperName = 'John Mayer';
+          // $yachtName = 'Search For Everything';
+          //
+          // $test = array('sailID' => $sailID, 'yachtName' => $yachtName, 'skipperName' => $skipperName);
+          // array_push($json['irc A'], $test);
+          // $edited_json = json_encode($json);
+          // file_put_contents('./assets/entry-list.json', $edited_json);
 
-              $json_string = file_get_contents("./assets/entry-list.json");
-              $json = json_decode($json_string, true);
-              foreach ($json as $class => $entries) {
-                echo '<tr><th colSpan=3>',$class,'</th></tr>';
-                foreach ($entries as $entry) {
-                  echo '<tr><td>'.$entry['sailID'].'</td><td>'.$entry['yachtName'].'</td><td>'.$entry['skipperName'].'</td></tr>';
-                }
-              }
-              ?>
-            </tbody>
-          </table>
+          $json_string = file_get_contents("./assets/entry-list.json");
+          $json = json_decode($json_string, true);
+          foreach ($json as $class => $entries) {
+            echo '<div class="entry">';
+            echo '<h2>'.$class.'</h2>';
+            echo '<table width="100%"><tbody>';
+            echo '<tr><th>Sail ID</th><th>Yacht Name</th><th>Skipper Name</th></tr>';
+            foreach ($entries as $entry) {
+              echo '<tr><td>'.$entry['sailID'].'</td><td>'.$entry['yachtName'].'</td><td>'.$entry['skipperName'].'</td></tr>';
+            }
+            echo '</tbody></table>';
+            echo '</div>';
+          }
+          ?>
         </div>
       </section>
 
