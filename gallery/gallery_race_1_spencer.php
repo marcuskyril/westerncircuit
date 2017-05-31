@@ -18,15 +18,18 @@
             <li>
               <a href="../gallery.php">Gallery</a>
             </li>
+            <li>
+              <a href="#">Gallery Race 1 - Spencer</a>
+            </li>
           </ol>
         </div>
       </section>
 
       <section>
         <div class="standard-content">
-            <iframe src="//embedsocial.com/facebook_album/album_photos/711141202366264" width="900" height="1500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            <iframe src="//embedsocial.com/facebook_album/album_photos/711141202366264" width="100%" height="1500" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
         </div>
-        
+
       </section>
 
   		<?php include('../html-includes/footer.html'); ?>
