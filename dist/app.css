@@ -7170,6 +7170,10 @@ blockquote {
   width: 100%;
 }
 
+.race {
+  display: none;
+}
+
 @font-face {
   font-family: 'FontAwesome';
   src: url("../assets/fonts/vendor/font-awesome/fontawesome-webfont.eot?v=4.7.0");
