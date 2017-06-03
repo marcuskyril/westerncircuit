@@ -7570,6 +7570,14 @@ th {
   background-color: #dff0d8;
 }
 
+.sponsor-content {
+  margin-bottom: 30px;
+}
+
+.sponsor-content img {
+  margin: 30px 0;
+}
+
 .entry {
   margin-bottom: 30px;
 }
