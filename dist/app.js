@@ -13077,13 +13077,13 @@ var menuControl = {
 
 		$('#close-overlay').on('click', function (e) {
 			e.preventDefault();
-			$('#header').css('background', 'transparent');
+			$('#header').removeClass("scrolled-100vh");
 			$('#overlay').removeClass('menu-overlay');
 			$('#nav-icon4').removeClass('open');
 		});
 
 		$('#nav-icon4').click(function () {
-			$('#header').css('background', '#fff');
+			$('#header').addClass("scrolled-100vh");
 			$(this).toggleClass('open');
 			$('#overlay').toggleClass('menu-overlay');
 		});
@@ -13176,16 +13176,18 @@ offcanvas.init();
 /***/ (function(module, exports) {
 
 jQuery(function ($) {
-
   var nav = $('#header');
   var $win = $(window);
   var winH = window.innerHeight;
+  var overlay = $('#overlay');
 
   $win.on("scroll", function () {
     if ($(this).scrollTop() > 1) {
       nav.addClass("scrolled-100vh");
     } else {
-      nav.removeClass("scrolled-100vh");
+      if (!overlay.hasClass('menu-overlay')) {
+        nav.removeClass("scrolled-100vh");
+      }
     }
   }).on("resize", function () {
     // If the user resizes the window
