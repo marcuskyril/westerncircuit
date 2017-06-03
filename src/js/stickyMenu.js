@@ -1,22 +1,16 @@
-let stickyMenu = {
-	appearAfter(offset) {
-		let menus = $('header');
+jQuery(function($) {
 
-		$(window).scroll(debounce(function() {
+  var nav = $('#header');
+  var $win = $(window);
+  var winH = window.innerHeight;
 
-			if ($(this).scrollTop() >= offset) {
-				menus.addClass('is-sticky animated slideInDown');
-				$('#countdownTimer').css('display', 'none');
-			} else {
-				menus.removeClass('is-sticky animated slideInDown');
-				$('#countdownTimer').css('display', 'block');
-			}
-		}, 300));
-	},
-
-	init() {
-		stickyMenu.appearAfter(300);
-	}
-}
-
-stickyMenu.init();
+  $win.on("scroll", function () {
+    if ($(this).scrollTop() > 1) {
+      nav.addClass("scrolled-100vh");
+    } else {
+      nav.removeClass("scrolled-100vh");
+    }
+  }).on("resize", function(){ // If the user resizes the window
+     winH = window.innerHeight; // you'll need the new height value
+  });
+});

@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 18);
+/******/ 	return __webpack_require__(__webpack_require__.s = 19);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10384,20 +10384,21 @@ sectionAccordion.init();
 
 window.$ = __webpack_require__(0);
 window.jQuery = window.$;
-window.debounce = __webpack_require__(16);
+window.debounce = __webpack_require__(17);
 window.throttle = __webpack_require__(11);
 window.niceSelect = __webpack_require__(8);
 __webpack_require__(9);
 
 // Require our js files.
-__webpack_require__(12);
+__webpack_require__(13);
 __webpack_require__(3);
 __webpack_require__(7);
-__webpack_require__(13);
+__webpack_require__(14);
+__webpack_require__(12);
 __webpack_require__(5);
 __webpack_require__(6);
-__webpack_require__(14);
 __webpack_require__(15);
+__webpack_require__(16);
 
 $('select').niceSelect();
 
@@ -10451,7 +10452,7 @@ $(function () {
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(17);
+__webpack_require__(18);
 
 $(function () {
   $('.carousel').slick({
@@ -10473,44 +10474,6 @@ $(function () {
 
 var countdown = {
   init: function init() {
-    //   var countdownTimerWidth = 350;
-    //   var cssMenuWidth = 1012;
-    //   cssMenuWidth = $("#cssmenu").width();
-    //   countdownTimerWidth = parseInt(cssMenuWidth * 27.47 / 100);
-    //
-    //   rightBarWidth = $(window).width() * 0.15;
-    //   countdownTimerWidth = rightBarWidth;
-    //
-    //   countdownTimerWidth = $(".tdright").width();
-    //   var countdownTimerHeight = countdownTimerWidth * 0.24;
-    //   var myCountdown5 = new Countdown({
-    //       year: 2016, // (optional) The target date's year
-    //       month: 8, // (optional) The target date's month
-    //       day: 15, // (optional) The target date's day
-    //       width: countdownTimerWidth,
-    //       height: countdownTimerHeight,
-    //       rangeHi: "day",
-    //       target: "countdownTimer",
-    //       numbers: {
-    //           font: "Arial",
-    //           color: "#FFFFFF",
-    //           bkgd: "black",
-    //           rounded: 0.15,
-    //           shadow: {
-    //               x: 0,
-    //               y: 3,
-    //               s: 4,
-    //               c: "#000000",
-    //               a: 0.4
-    //           }
-    //       },
-    //       labels: {
-    //           font: "Arial",
-    //           color: "black",
-    //           weight: "normal" // <- no comma on last item!
-    //       }
-    //   });
-
     $("#countdownTimer").countdown("2017/12/12", function (event) {
       $(this).text(event.strftime('%D DAYS %H HOURS %M MINS %S SECS'));
     });
@@ -13109,6 +13072,30 @@ module.exports = function throttle(func, wait, options) {
 /* 12 */
 /***/ (function(module, exports) {
 
+var menuControl = {
+	init: function init() {
+
+		$('#close-overlay').on('click', function (e) {
+			e.preventDefault();
+			$('#header').css('background', 'transparent');
+			$('#overlay').removeClass('menu-overlay');
+			$('#nav-icon4').removeClass('open');
+		});
+
+		$('#nav-icon4').click(function () {
+			$('#header').css('background', '#fff');
+			$(this).toggleClass('open');
+			$('#overlay').toggleClass('menu-overlay');
+		});
+	}
+};
+
+menuControl.init();
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports) {
+
 var offcanvas = {
 
 	/**
@@ -13185,33 +13172,29 @@ var offcanvas = {
 offcanvas.init();
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports) {
 
-var stickyMenu = {
-	appearAfter: function appearAfter(offset) {
-		var menus = $('header');
+jQuery(function ($) {
 
-		$(window).scroll(debounce(function () {
+  var nav = $('#header');
+  var $win = $(window);
+  var winH = window.innerHeight;
 
-			if ($(this).scrollTop() >= offset) {
-				menus.addClass('is-sticky animated slideInDown');
-				$('#countdownTimer').css('display', 'none');
-			} else {
-				menus.removeClass('is-sticky animated slideInDown');
-				$('#countdownTimer').css('display', 'block');
-			}
-		}, 300));
-	},
-	init: function init() {
-		stickyMenu.appearAfter(300);
-	}
-};
-
-stickyMenu.init();
+  $win.on("scroll", function () {
+    if ($(this).scrollTop() > 1) {
+      nav.addClass("scrolled-100vh");
+    } else {
+      nav.removeClass("scrolled-100vh");
+    }
+  }).on("resize", function () {
+    // If the user resizes the window
+    winH = window.innerHeight; // you'll need the new height value
+  });
+});
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports) {
 
 var contentTab = {
@@ -13236,7 +13219,7 @@ var contentTab = {
 contentTab.init();
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports) {
 
 var tabs = {
@@ -13261,7 +13244,7 @@ var tabs = {
 tabs.init();
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports) {
 
 /**
@@ -13323,7 +13306,7 @@ module.exports = function debounce(func, wait, immediate){
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -16224,7 +16207,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1);

@@ -6,64 +6,83 @@
 	  <link rel="stylesheet" href="dist/app.css">
   </head>
   <body>
-	  <div id="app">
-
+	  <div class="standard-page" id="app">
   		<?php include('./html-includes/navigation.html'); ?>
-
-  		<!-- Hero -->
-      <section class="hero carousel">
-        <div class="carousel__item" style="background-image: url(img/carousel_img_1.jpg);">
-          <div class="hero__speech">
-            <div class="category">
-              <i class="fa fa-tag" aria-hidden="true"></i>Featured news
+  		<hero>
+        <section class="hero-container">
+          <!-- <div class="hero-img img-no-frills"></div> -->
+          <video loop muted autoplay class="fullscreen-bg__video">
+            <source src="img/hero-video-2.mp4"/>
+          </video>
+        </section>
+      </hero>
+      <section id="intro">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-6 col-sm-12">
+              <div class="content align-center">
+                <div class="text-wrapper">
+                  <h2 id="countdownTimer"></h2>
+                </div>
+              </div>
             </div>
-            <h1 class="hero__speech-title">13th, 14th, 20th August 2016</h1>
-            <p>
-              Jointly organized by Singapore Management University and Raffles Marina
-            </p>
-            <a href="javascript:void(0);" class="btn"><i class="fa fa-facebook-square" aria-hidden="true"></i>WCSR</a>
+            <div class="col-lg-6 col-sm-12">
+              <!-- <img src="./img/carousel_img_4.jpg" /> -->
+              <div class="block-img" id="intro-img"></div>
+            </div>
           </div>
         </div>
-
-        <div class="carousel__item" style="background-image: url(img/carousel_img_3.jpg);">
-          <div class="hero__speech">
-            <div class="category">
-              <i class="fa fa-tag" aria-hidden="true"></i>Featured news
+      </section>
+      <section id="gallery">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-3 col-sm-12">
+              <div class="block-img" id="img-3"></div>
             </div>
-            <h1 class="hero__speech-title">
-              Sign Up Information
-            </h1>
-            <a href="javascript:void(0);" class="btn">Click here<i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+            <div class="col-lg-3 col-sm-12">
+              <div class="content align-center">
+                <div class="text-wrapper">
+                  <h2>Test</h2>
+                  <p>La preuve que le petit prince a existé c’est qu’il était ravissant, qu’il riait,
+                    et qu’il voulait un mouton. Quand on veut un mouton, c’est la preuve qu’on existe.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-12">
+              <div class="block-img" id="img-3"></div>
+            </div>
+            <div class="col-lg-3 col-sm-12">
+              <div class="content align-center">
+                <div class="text-wrapper">
+                  <h2>Test</h2>
+                  <p>La preuve que le petit prince a existé c’est qu’il était ravissant, qu’il riait,
+                    et qu’il voulait un mouton. Quand on veut un mouton, c’est la preuve qu’on existe.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div class="carousel__item" style="background-image: url(img/carousel_img_4.jpg);">
-          <div class="hero__speech">
-            <div class="category">
-              <i class="fa fa-tag" aria-hidden="true"></i>Featured News
+      </section>
+      <section id="intro">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-lg-6 col-sm-12">
+              <div class="content align-center">
+                <div class="text-wrapper">
+                  <h2>Test</h2>
+                  <p>La preuve que le petit prince a existé c’est qu’il était ravissant, qu’il riait,
+                    et qu’il voulait un mouton. Quand on veut un mouton, c’est la preuve qu’on existe.</p>
+                </div>
+              </div>
             </div>
-            <h1 class="hero__speech-title">SMU Sailing</h1>
-            <p>
-              Want to know more about us? Visit our Facebook page!
-            </p>
-            <a href="javascript:void(0);" class="btn"><i class="fa fa-facebook-square" aria-hidden="true"></i>SMU Sailing</a>
+            <div class="col-lg-6 col-sm-12">
+              <div class="block-img" id="sec-img"></div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- <section class="countdown">
-        <div class="container align-center">
-          <h4>Counting down to the 19th SMU-RM<br/>
-            <span style="color: #fff;">Western Circuit Sailing Regatta!</span>
-          </h4>
-          <div id="countdownTimer"></div>
-        </div>
-
-      </section> -->
-
-<!--      delete this comment-->
-
-  		<?php include('html-includes/footer.html'); ?>
+  		<?php include('html-includes/footer_new.html'); ?>
 
 	  </div>
 	  <!-- Scripts -->

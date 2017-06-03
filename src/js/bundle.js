@@ -10,6 +10,7 @@ require('./offcanvas');
 require('./accordion');
 require('./countdown');
 require('./stickyMenu');
+require('./menuControl');
 require('./callout');
 require('./carousel');
 require('./table-content-tab');

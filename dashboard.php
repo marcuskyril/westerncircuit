@@ -11,10 +11,14 @@
       // do some fancy password protect shit
       // firebase..?
     ?>
+<<<<<<< HEAD
     
       
       
 	  <div id="app">
+=======
+	  <div class="standard-page" id="app">
+>>>>>>> 43465b135053db5d5b9ec73a0d199db8c7503304
   		<?php include('html-includes/navigation.html'); ?>
       <section class="landing__banner-bar">
         <div class="container">
@@ -79,9 +83,13 @@
         </div>
       </main>
 
+<<<<<<< HEAD
   		<?php include('html-includes/footer.html'); ?>
         
         
+=======
+  		<?php include('html-includes/footer_new.html');
+>>>>>>> 43465b135053db5d5b9ec73a0d199db8c7503304
 	  </div>
 	  <!-- Scripts -->
 	  <script src="dist/app.js"></script>

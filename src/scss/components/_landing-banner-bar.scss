@@ -1,15 +1,15 @@
 .landing__banner-bar {
-	background: linear-gradient(to right, #43cea2, #185a9d);
+	background: linear-gradient(to right, $grey--light, $white);
 	background-size: cover;
-	padding: 20px 0;
-	margin: 0 0 30px;
+	padding: 28px 0;
+	margin: 100 0 30px;
 
 	@include grid-media($lg-grid) {
-		margin: 0 0 50px;
+		margin: 100 0 50px;
 	}
 
 	.breadcrumb {
-		margin: 0 0 15px 0;
+		margin: 0;
 
 		li:first-child {
 			a {

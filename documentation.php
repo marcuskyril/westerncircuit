@@ -6,8 +6,8 @@
 	  <link rel="stylesheet" href="dist/app.css">
   </head>
   <body>
-	  <div id="app">
-  		<?php include('html-includes/navigation.html'); ?>
+	  <div class="standard-page" id="app">
+  		<?php include('./html-includes/navigation.html'); ?>
       <section class="landing__banner-bar">
         <div class="container">
           <h1>Documentation</h1>
@@ -22,7 +22,7 @@
         </div>
       </section>
 
-      <section>
+      <main>
         <div class="standard-content">
   				<table width="100%">
             <tbody>
@@ -78,9 +78,9 @@
             </tbody>
           </table>
         </div>
-      </section>
+      </main>
 
-  		<?php include('html-includes/footer.html'); ?>
+  		<?php include('html-includes/footer_new.html'); ?>?>
 	  </div>
 	  <!-- Scripts -->
 	  <script src="dist/app.js"></script>

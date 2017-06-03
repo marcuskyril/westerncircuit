@@ -6,7 +6,7 @@
 	  <link rel="stylesheet" href="dist/app.css">
   </head>
   <body>
-	  <div id="app">
+	  <div class="standard-page" id="app">
   		<?php include('html-includes/navigation.html'); ?>
       <section class="landing__banner-bar">
         <div class="container">
@@ -28,7 +28,7 @@
         </div>
       </section>
 
-  		<?php include('html-includes/footer.html'); ?>
+  		<?php include('html-includes/footer_new.html'); ?>
 	  </div>
 	  <!-- Scripts -->
 	  <script src="dist/app.js"></script>

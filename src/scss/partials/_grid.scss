@@ -1,18 +1,56 @@
 /**
  * @TODO:
- * REMOVE ALL THESE CLASSES SUCH AS 
- * - container-md-up 
+ * REMOVE ALL THESE CLASSES SUCH AS
+ * - container-md-up
  * - grid-collapsed-md-up
  *
  * FIND A BETTER WAY TO MANAGE THESE DISPLAYS.
  */
+
+ .row {
+ 	margin-left: 0px;
+  margin-right: 0px;
+
+	&:before {
+		content: " ";
+		display: table;
+	}
+ }
+
+.container-fluid {
+	margin-right: auto;
+  margin-left: auto;
+  padding-left: 0px;
+  padding-right: 0px;
+	&:before {
+		content: " ";
+		display: table;
+	}
+}
+
+.container-wide {
+	@include grid-container();
+	// max-width: 1500px;
+	margin: 0 auto;
+	padding: 0 30px;
+
+	@include grid-media($sm-grid) {
+		padding: 0 20px;
+	}
+
+	@at-root {
+		#{&}--no-pad {
+			padding: 0;
+		}
+	}
+}
 
 .container {
 	@include grid-container();
 	max-width: 1140px;
 	margin: 0 auto;
 	padding: 0 15px;
-	
+
 	@include grid-media($sm-grid) {
 		padding: 0 20px;
 	}
