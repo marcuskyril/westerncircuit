@@ -1,7 +1,7 @@
 <?php
     include('class.fileuploader.php');
 	header("location:dashboard.php");    
-    echo '<script>console.log("what be happenin");</script>';
+
     // initialize the FileUploader
     $FileUploader = new FileUploader('files', array(
         
@@ -36,7 +36,7 @@
 	// upload directory {String}
 	// note that main directory is the directory where you are initializing the FileUploader class
 	// example: '../uploads/'
-	'uploadDir' => './assets/pdf/',
+	'uploadDir' => './assets/results/',
 	
 	// file title {String, Array}
 	// example: 'name' - original file name
