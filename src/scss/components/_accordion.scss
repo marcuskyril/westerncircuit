@@ -7,7 +7,6 @@
 		}
 
 		> .accordion__header {
-			background-color: $dark-blue;
 
 			&:after {
 				transform: rotate(90deg);
@@ -22,15 +21,15 @@
 			display: block;
 			padding: 15px;
 
-			background: $purple-grey;
-			color: $white;
+			background: $white;
+			color: $caption-grey;
 			font: 16px $font-pri;
 			font-weight: 700;
 			transition: background .3s ease-in-out;
 
 			&:hover {
 				cursor: pointer;
-				background: $blue;
+				// background: $grey--lightest;
 			}
 
 			&:after {
@@ -38,9 +37,9 @@
 
 				position: absolute;
 				right: 20px;
+				top: 25px;
 
 				margin: auto;
-				padding-top: 3px;
 
 				font-family: $font-fa;
 				transition: transform .2s ease-in-out;
@@ -59,7 +58,6 @@
 		#{&}__body {
 			display: block;
 			max-height: 0;
-			border: solid 1px $divider-grey;
 			border-top: 0;
 
 			overflow: hidden;
