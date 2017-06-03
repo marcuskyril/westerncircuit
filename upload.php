@@ -14,7 +14,6 @@
   if($data['isSuccess'] && count($data['files']) > 0) {
     // get uploaded files
     $uploadedFiles = $data['files'];
-    header("location:dashboard.php");
   }
 
   // if warnings
@@ -39,6 +38,7 @@
 	$fileList = $FileUploader->getFileList();
 
 	// show
+  echo '<h2>YOUR FANCY FILES</h2>';
 	echo '<pre>';
 	print_r($fileList);
 	echo '</pre>';

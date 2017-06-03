@@ -67,13 +67,7 @@
               <div id="uploadResult"></div>
             </form>
 
-            <!-- <div class="fileuploader fileuploader-theme-dragdrop">
-                <form id="uploadForm" action="upload.php" method="POST" enctype="multipart/form-data">
-                    <input type="file" name="files">
-                    <input type="submit" class="btn">
-                </form>
-            </div> -->
-            <form action="upload.php" method="post" enctype="multipart/form-data">
+            <form action="#" method="post" enctype="multipart/form-data">
         			<input type="file" name="files">
         			<input type="submit">
         		</form>
@@ -89,7 +83,7 @@
     <!-- File Uploading client sideJS-->
     <script type="text/javascript">
       $('input[name="files"]').fileuploader(
-        
+
       );
     </script>
 
