@@ -1,16 +1,47 @@
 .accordion {
 	margin-bottom: 5px;
 
+	ul, ol {
+		margin-left: 40px;
+	}
+
+	ul {
+		list-style: disc;
+	}
+
+	ol {
+		list-style: lower-alpha;
+	}
+
+	h3 {
+		display: inline;
+	}
+
+	a {
+		text-decoration: underline; 
+		color: black;
+		padding: 0px;
+	}
+
+	a:hover {
+		color: #222349;
+	}
+
 	&.is-opened {
 		> .accordion__body {
 			max-height: 10000px; // Just a random height that we'll never exceed.
 		}
 
 		> .accordion__header {
+			background-color: $dark-blue;
 
 			&:after {
 				transform: rotate(90deg);
 			}
+		}
+		
+		> .accordion__header.nested-header {
+			background-color: #dedee4;
 		}
 	}
 
@@ -21,15 +52,15 @@
 			display: block;
 			padding: 15px;
 
-			background: $white;
-			color: $caption-grey;
+			background: $purple-grey;
+			color: $white;
 			font: 16px $font-pri;
-			font-weight: 700;
+			//font-weight: 700;
 			transition: background .3s ease-in-out;
 
 			&:hover {
 				cursor: pointer;
-				// background: $grey--lightest;
+				background: $blue;
 			}
 
 			&:after {
@@ -37,9 +68,10 @@
 
 				position: absolute;
 				right: 20px;
-				top: 25px;
+				top: 20px;
 
 				margin: auto;
+				padding-top: 3px;
 
 				font-family: $font-fa;
 				transition: transform .2s ease-in-out;
@@ -58,6 +90,7 @@
 		#{&}__body {
 			display: block;
 			max-height: 0;
+			border: solid 1px $divider-grey;
 			border-top: 0;
 
 			overflow: hidden;
@@ -65,7 +98,47 @@
 		}
 
 		#{&}__content {
-			padding: 15px;
+			padding: 40px 20px 0;
+
+			.image-showcase {
+				margin-bottom: 30px;
+			}
+
+			table {
+				margin-top: 0;
+				margin-bottom: 20px;
+			}
+
+			table.no-style, table.no-style tbody, table.no-style tr, table.no-style td {
+		    	border: none;
+		    	background: transparent;
+			}
+
+			table.no-style tbody > tr > td:first-child {
+		    	white-space: nowrap;
+			}
+
+			table.no-style p {
+				margin-bottom: 0;
+			}
+
+			table.no-style tbody > tr > td {
+		    	padding: 15px 10px;
+			}
 		}
 	}
+}
+
+.accordion__header.nested-header {
+	background: #dedee4;
+	color: #333;
+}
+
+.accordion__body.nested-body {
+	background: #fafafb;
+	border: none;
+}
+
+.accordion__content:last-child {
+    margin-bottom: 40px;
 }

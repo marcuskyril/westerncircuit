@@ -8085,8 +8085,38 @@ blockquote {
   margin-bottom: 5px;
 }
 
+.accordion ul, .accordion ol {
+  margin-left: 40px;
+}
+
+.accordion ul {
+  list-style: disc;
+}
+
+.accordion ol {
+  list-style: lower-alpha;
+}
+
+.accordion h3 {
+  display: inline;
+}
+
+.accordion a {
+  text-decoration: underline;
+  color: black;
+  padding: 0px;
+}
+
+.accordion a:hover {
+  color: #222349;
+}
+
 .accordion.is-opened > .accordion__body {
   max-height: 10000px;
+}
+
+.accordion.is-opened > .accordion__header {
+  background-color: #222349;
 }
 
 .accordion.is-opened > .accordion__header:after {
@@ -8094,27 +8124,32 @@ blockquote {
           transform: rotate(90deg);
 }
 
+.accordion.is-opened > .accordion__header.nested-header {
+  background-color: #dedee4;
+}
+
 .accordion__header {
   position: relative;
   display: block;
   padding: 15px;
-  background: #ffffff;
-  color: #666666;
+  background: #7a7b92;
+  color: #ffffff;
   font: 16px "Lato", sans-serif;
-  font-weight: 700;
   transition: background .3s ease-in-out;
 }
 
 .accordion__header:hover {
   cursor: pointer;
+  background: #3f4fa0;
 }
 
 .accordion__header:after {
   content: '\f054';
   position: absolute;
   right: 20px;
-  top: 25px;
+  top: 20px;
   margin: auto;
+  padding-top: 3px;
   font-family: "FontAwesome";
   transition: -webkit-transform .2s ease-in-out;
   transition: transform .2s ease-in-out;
@@ -8130,13 +8165,54 @@ blockquote {
 .accordion__body {
   display: block;
   max-height: 0;
+  border: solid 1px #dddddd;
   border-top: 0;
   overflow: hidden;
   transition: max-height .5s ease-in-out;
 }
 
 .accordion__content {
-  padding: 15px;
+  padding: 40px 20px 0;
+}
+
+.accordion__content .image-showcase {
+  margin-bottom: 30px;
+}
+
+.accordion__content table {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.accordion__content table.no-style, .accordion__content table.no-style tbody, .accordion__content table.no-style tr, .accordion__content table.no-style td {
+  border: none;
+  background: transparent;
+}
+
+.accordion__content table.no-style tbody > tr > td:first-child {
+  white-space: nowrap;
+}
+
+.accordion__content table.no-style p {
+  margin-bottom: 0;
+}
+
+.accordion__content table.no-style tbody > tr > td {
+  padding: 15px 10px;
+}
+
+.accordion__header.nested-header {
+  background: #dedee4;
+  color: #333;
+}
+
+.accordion__body.nested-body {
+  background: #fafafa;
+  border: none;
+}
+
+.accordion__content:last-child {
+  margin-bottom: 40px;
 }
 
 .countdown {
