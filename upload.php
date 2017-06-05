@@ -1,44 +1,62 @@
 <?php
   include('class.fileuploader.php');
 
-  // initialize FileUploader
+  $documentName = '';
+  $uploadType = '';
+
+  // get POST inputs
+  if(isset($_POST['uploadType']) && isset ($_POST['documentName'])){
+    $uploadType = $_POST['uploadType'];
+    $documentName = $_POST['documentName'];
+  }
+
+  // replace all spaces with _
+  $documentName = str_replace(" ", "_", $documentName);
+
+  // route the file to the correct location
+  $uploadDirArr = array(
+                  "media" => "./assets/media/",
+                  "documentation" => "./assets/documentation/",
+                  "results" => "./assets/results/"
+                );
+
+  if(isset($uploadDirArr[$uploadType])) {
+    $uploadDir = $uploadDirArr[$uploadType];
+  } else {
+    $uploadDir = '';
+  }
+
+	// initialize FileUploader
   $FileUploader = new FileUploader('files', array(
-      'uploadDir' => './assets/results/',
-      'title' => 'name'
+    'limit' => 1,
+    'maxSize' => null,
+    'fileMaxSize' => null,
+    'extensions' => ['jpg', 'jpeg', 'png', 'pdf', 'doc', 'docx'],
+    'required' => false,
+    'uploadDir' => $uploadDir,
+    'title' => $documentName,
+    'replace' => true,
+    'listInput' => true,
+    'files' => null
   ));
 
-  // call to upload the files
+	// call to upload the files
   $data = $FileUploader->upload();
-
-  // if uploaded and success
-  if($data['isSuccess'] && count($data['files']) > 0) {
-    // get uploaded files
-    $uploadedFiles = $data['files'];
-  }
-
-  // if warnings
-  if($data['hasWarnings']) {
-    // get warnings
+	if($data['hasWarnings']) {
     $warnings = $data['warnings'];
 
-		echo '<pre>';
+ 		echo '<pre>';
     print_r($warnings);
-	  echo '</pre>';
-    exit;
+		echo '</pre>';
   }
 
-	// unlink the files
-	// !important only for appended files
-	// you will need to give the array with appendend files in 'files' option of the FileUploader
-	foreach($FileUploader->getRemovedFiles('file') as $key=>$value) {
-		unlink('../uploads/' . $value['name']);
+	if($data['isSuccess'] && count($data['files']) > 0) {
+		$file = $data['files'][0]['file'];
+		$filename = $data['files'][0]['name'];
+
+		// echo our form data
+		// echo '<h1>Your form data:</h1>';
+		// echo 'type: ' . $uploadType . '<br>';
+		// echo 'file name: ' . $filename . '<br>';
+    echo '<p class="success-message">Covfefe. '.$filename.' successfully added!</p>';
 	}
-
-	// get the fileList
-	$fileList = $FileUploader->getFileList();
-
-	// show
-  echo '<h2>YOUR FANCY FILES</h2>';
-	echo '<pre>';
-	print_r($fileList);
-	echo '</pre>';

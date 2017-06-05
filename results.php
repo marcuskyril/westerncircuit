@@ -62,11 +62,8 @@
                               );
 
                 echo '<tr><td>'.$name.'</td><td><a href="'.$location.'"><i class="'.$iconArr[$fileType].'"></i></a></td></tr>';
-
               }
-
             }
-
             echo '</tbody></table>';
             echo '</div>';
           }
@@ -74,7 +71,7 @@
         </div>
       </main>
 
-  		<?php include('html-includes/footer_new.html'); ?>?>
+  		<?php include('html-includes/footer.html'); ?>?>
 	  </div>
 	  <!-- Scripts -->
 	  <script src="dist/app.js"></script>

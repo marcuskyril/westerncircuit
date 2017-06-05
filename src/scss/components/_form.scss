@@ -98,11 +98,6 @@ textarea {
 		box-shadow: 0px 0px 19px 2px rgba(233,237,245,0.58);
 		border: solid 1px darken($divider-grey, 5);
 	}
-
-	&::placeholder {
-		font-style: italic;
-		color: $caption-grey;
-	}
 }
 
 textarea {
@@ -111,4 +106,38 @@ textarea {
 
 .field-group {
 	margin-bottom: 15px;
+}
+
+.input-group .btn {
+	margin-top: 15px;
+  padding: 10px 30px;
+	background-color: $caption-grey;
+	box-shadow: 0 3px $grey--lightest;
+
+	&:hover {
+		background-color: $grey--light;
+	}
+}
+
+.input-group input, .nice-select {
+    width: 100%;
+    margin: 5px 0px;
+    color: #222;
+    background: $grey--lightest;
+    border-radius: 2px;
+
+		&::placeholder {
+			font-style: italic;
+			color: $caption-grey;
+		}
+}
+
+.nice-select {
+	font-family: $font-pri;
+	font-size: 16px;
+
+	&:after {
+		font-size: 18px;
+    color: $caption-grey;
+	}
 }

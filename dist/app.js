@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 20);
+/******/ 	return __webpack_require__(__webpack_require__.s = 21);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -10384,22 +10384,23 @@ sectionAccordion.init();
 
 window.$ = __webpack_require__(0);
 window.jQuery = window.$;
-window.debounce = __webpack_require__(18);
-window.throttle = __webpack_require__(12);
-window.niceSelect = __webpack_require__(8);
-__webpack_require__(9);
+window.debounce = __webpack_require__(19);
+window.throttle = __webpack_require__(13);
+window.niceSelect = __webpack_require__(9);
 __webpack_require__(10);
+__webpack_require__(11);
 
 // Require our js files.
-__webpack_require__(14);
+__webpack_require__(8);
+__webpack_require__(15);
 __webpack_require__(3);
 __webpack_require__(7);
-__webpack_require__(15);
-__webpack_require__(13);
+__webpack_require__(16);
+__webpack_require__(14);
 __webpack_require__(5);
 __webpack_require__(6);
-__webpack_require__(16);
 __webpack_require__(17);
+__webpack_require__(18);
 
 $('select').niceSelect();
 
@@ -10408,7 +10409,7 @@ $('select').niceSelect();
 /***/ (function(module, exports, __webpack_require__) {
 
 // position the callout underneath the fixed header
-__webpack_require__(11);
+__webpack_require__(12);
 
 $.fn.qtip.zindex = 900;
 
@@ -10453,7 +10454,7 @@ $(function () {
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(19);
+__webpack_require__(20);
 
 $(function () {
   $('.carousel').slick({
@@ -10476,7 +10477,7 @@ $(function () {
 var countdown = {
   init: function init() {
     $("#countdownTimer").countdown("2017/12/12", function (event) {
-      $(this).text(event.strftime('%D DAYS %H HOURS %M MINS %S SECS'));
+      $(this).text(event.strftime('%D DAYS %H HRS %M MINS %S SECS'));
     });
   }
 };
@@ -10485,6 +10486,88 @@ countdown.init();
 
 /***/ }),
 /* 8 */
+/***/ (function(module, exports) {
+
+$('input[name="files[]"]').fileuploader({
+	limit: 1,
+	extensions: ['jpg', 'jpeg', 'png', 'pdf', 'doc', 'docx'],
+	changeInput: ' ',
+	theme: 'thumbnails',
+	enableApi: true,
+	addMore: true,
+	thumbnails: {
+		box: '<div class="fileuploader-items">\
+                    <ul class="fileuploader-items-list">\
+				      <li class="fileuploader-thumbnails-input"><div class="fileuploader-thumbnails-input-inner">+</div></li>\
+                    </ul>\
+                </div>',
+		item: '<li class="fileuploader-item">\
+			       <div class="fileuploader-item-inner">\
+                         <div class="thumbnail-holder">${image}</div>\
+                         <div class="actions-holder">\
+                             <a class="fileuploader-action fileuploader-action-remove" title="Remove"><i class="remove"></i></a>\
+                         </div>\
+                     	   <div class="progress-holder">${progressBar}</div>\
+                     </div>\
+                 </li>',
+		item2: '<li class="fileuploader-item">\
+			       <div class="fileuploader-item-inner">\
+                         <div class="thumbnail-holder">${image}</div>\
+                         <div class="actions-holder">\
+                             <a class="fileuploader-action fileuploader-action-remove" title="Remove"><i class="remove"></i></a>\
+                         </div>\
+                     </div>\
+                 </li>',
+		startImageRenderer: true,
+		canvasImage: false,
+		_selectors: {
+			list: '.fileuploader-items-list',
+			item: '.fileuploader-item',
+			start: '.fileuploader-action-start',
+			retry: '.fileuploader-action-retry',
+			remove: '.fileuploader-action-remove'
+		},
+		onItemShow: function onItemShow(item, listEl, parentEl, newInputEl, inputEl) {
+			var plusInput = listEl.find('.fileuploader-thumbnails-input'),
+			    api = $.fileuploader.getInstance(inputEl.get(0));
+
+			if (api.getFiles().length >= api.getOptions().limit) {
+				plusInput.hide();
+			}
+
+			plusInput.insertAfter(item.html);
+
+			if (item.format == 'image') {
+				item.html.find('.fileuploader-item-icon').hide();
+			}
+		},
+		onItemRemove: function onItemRemove(html, listEl, parentEl, newInputEl, inputEl) {
+			var plusInput = listEl.find('.fileuploader-thumbnails-input'),
+			    api = $.fileuploader.getInstance(inputEl.get(0));
+
+			html.children().animate({ 'opacity': 0 }, 200, function () {
+				setTimeout(function () {
+					html.remove();
+
+					if (api.getFiles().length - 1 < api.getOptions().limit) {
+						plusInput.show();
+					}
+				}, 100);
+			});
+		}
+	},
+	afterRender: function afterRender(listEl, parentEl, newInputEl, inputEl) {
+		var plusInput = listEl.find('.fileuploader-thumbnails-input'),
+		    api = $.fileuploader.getInstance(inputEl.get(0));
+
+		plusInput.on('click', function () {
+			api.open();
+		});
+	}
+});
+
+/***/ }),
+/* 9 */
 /***/ (function(module, exports) {
 
 /*  jQuery Nice Select - v1.1.0
@@ -10664,7 +10747,7 @@ countdown.init();
 })(jQuery);
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10919,7 +11002,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 });
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports) {
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -12798,7 +12881,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 })(jQuery);
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -14908,7 +14991,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 })(window, document);
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports) {
 
 // Returns a function, that, when invoked, will only be triggered at most once
@@ -14949,7 +15032,7 @@ module.exports = function throttle(func, wait, options) {
 };
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports) {
 
 var menuControl = {
@@ -14973,7 +15056,7 @@ var menuControl = {
 menuControl.init();
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports) {
 
 var offcanvas = {
@@ -15052,7 +15135,7 @@ var offcanvas = {
 offcanvas.init();
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports) {
 
 jQuery(function ($) {
@@ -15076,7 +15159,7 @@ jQuery(function ($) {
 });
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports) {
 
 var contentTab = {
@@ -15101,7 +15184,7 @@ var contentTab = {
 contentTab.init();
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports) {
 
 var tabs = {
@@ -15126,7 +15209,7 @@ var tabs = {
 tabs.init();
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports) {
 
 /**
@@ -15188,7 +15271,7 @@ module.exports = function debounce(func, wait, immediate){
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -18089,7 +18172,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(1);

@@ -7,6 +7,7 @@ require('./libraries/jquery.countdown.js');
 require('./libraries/jquery.fileuploader.js');
 
 // Require our js files.
+require('./fileUploader');
 require('./offcanvas');
 require('./accordion');
 require('./countdown');

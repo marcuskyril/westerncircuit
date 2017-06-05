@@ -28,7 +28,7 @@
         </div>
       </section>
 
-  		<?php include('html-includes/footer_new.html'); ?>
+  		<?php include('html-includes/footer.html'); ?>
 	  </div>
 	  <!-- Scripts -->
 	  <script src="dist/app.js"></script>

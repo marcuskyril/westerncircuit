@@ -1,28 +1,25 @@
 {
-    "irc A": [{
-        "sailID": "SIN 1912",
-        "yachtName": "Petit Bateau",
-        "skipperName": "Esben Poulsson"
+    "muchas gracias": [{
+        "sailID": "Ximula",
+        "yachtName": "Yes",
+        "skipperName": "No"
     }, {
-        "sailID": "SIN 4321",
-        "yachtName": "Zanzibar",
-        "skipperName": "Jonathan Mahony"
-    }, {
-        "sailID": "GBR 1856 L",
-        "yachtName": "Rikki Tikki Tavi",
-        "skipperName": "Chris Furness"
+        "sailID": "muy bien",
+        "yachtName": "no bien",
+        "skipperName": "soy"
     }],
-    "irc B": [{
-        "sailID": "GER 408",
-        "yachtName": "Born in Fire",
-        "skipperName": "Pascal Radue"
+    "kyril's cup": [{
+        "sailID": "pendejo",
+        "yachtName": "hombres",
+        "skipperName": "yo soy"
+    }],
+    "IRC A": [{
+        "sailID": "SG 17171",
+        "yachtName": "Kyril",
+        "skipperName": "Kyril"
     }, {
-        "sailID": "SIN 333",
-        "yachtName": "Waka Tere",
-        "skipperName": "Kurt Metzger"
-    }, {
-        "sailID": "SIN 852",
-        "yachtName": "Shoon Fung Too",
-        "skipperName": "Gordon Maxted"
+        "sailID": "SG 1919",
+        "yachtName": "hola",
+        "skipperName": "hola"
     }]
 }

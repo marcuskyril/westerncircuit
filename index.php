@@ -10,7 +10,10 @@
   		<?php include('./html-includes/navigation.html'); ?>
   		<hero>
         <section class="hero-container">
-          <!-- <div class="hero-img img-no-frills"></div> -->
+          <div class="hero-text">
+            <h2 id="countdownTimer"></h2>
+            <h3 id="hero-text">to Western Circuit 2017</h3>
+          </div>
           <video loop muted autoplay class="fullscreen-bg__video">
             <source src="img/hero-video-2.mp4"/>
           </video>
@@ -22,7 +25,9 @@
             <div class="col-lg-6 col-sm-12">
               <div class="content align-center">
                 <div class="text-wrapper">
-                  <h2 id="countdownTimer"></h2>
+                  <h2>About us</h2>
+                  <p>La preuve que le petit prince a existé c’est qu’il était ravissant, qu’il riait,
+                    et qu’il voulait un mouton. Quand on veut un mouton, c’est la preuve qu’on existe.</p>
                 </div>
               </div>
             </div>
@@ -82,7 +87,7 @@
         </div>
       </section>
 
-  		<?php include('html-includes/footer_new.html'); ?>
+  		<?php include('html-includes/footer.html'); ?>
 
 	  </div>
 	  <!-- Scripts -->

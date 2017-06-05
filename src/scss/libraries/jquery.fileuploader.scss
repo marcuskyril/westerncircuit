@@ -7,7 +7,7 @@
  * License: http://innostudio.de/fileuploader/documentation/#license
  */
 
-/* 
+/*
     Configuration
 */
 .fileuploader,
@@ -17,22 +17,23 @@
     box-sizing: border-box;
 }
 
-/* 
+/*
     Parent
 */
 .fileuploader {
     display: block;
     width: 100%;
     padding: 15px;
-    margin: 15px 0;
-    background: #f5f6fA;
-    border-radius: 4px;
+    margin: 5px 0;
+    background: $grey--lightest;
+    border: solid 1px $divider-grey;
+    border-radius: 2px;
     line-height: normal;
     text-align: left;
     overflow: hidden;
 }
 
-/* 
+/*
     Input
 */
 .fileuploader-input {
@@ -153,10 +154,28 @@
     default theme
 */
 
+.fileuploader-theme-thumbnails .fileuploader-thumbnails-input-inner {
+    // width: 50px;
+    // height: 50px;
+    border: 2px dashed #c2cdda;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 30px;
+    color: #acb9c7;
+    vertical-align: top;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.1s ease;
+    transition: all 0.1s ease;
+}
+
 /* list */
 .fileuploader-items-list {
     display: block;
-    margin: 0 -15px;
+    // margin: 0 -15px;
     padding: 0;
     list-style: none;
 }

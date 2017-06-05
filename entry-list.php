@@ -26,18 +26,6 @@
         <div class="standard-content">
           <?php
 
-          // $json_string = file_get_contents("./assets/entry-list.json");
-          // $json = json_decode($json_string, true);
-          //
-          // $sailID = 'Sail 123';
-          // $skipperName = 'John Mayer';
-          // $yachtName = 'Search For Everything';
-          //
-          // $test = array('sailID' => $sailID, 'yachtName' => $yachtName, 'skipperName' => $skipperName);
-          // array_push($json['irc A'], $test);
-          // $edited_json = json_encode($json);
-          // file_put_contents('./assets/entry-list.json', $edited_json);
-
           $json_string = file_get_contents("./assets/entry-list.json");
           $json = json_decode($json_string, true);
           foreach ($json as $class => $entries) {
@@ -55,7 +43,7 @@
         </div>
       </section>
 
-  		<?php include('html-includes/footer_new.html'); ?>
+  		<?php include('html-includes/footer.html'); ?>
 	  </div>
 	  <!-- Scripts -->
 	  <script src="dist/app.js"></script>

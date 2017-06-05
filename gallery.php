@@ -20,144 +20,184 @@
             </li>
           </ol>
         </div>
-      </section>
+    </section>
+    <main>
 
-      <section>
-<!--
-        <div class="standard-content">
-<<<<<<< HEAD
-            <!-- gallery links here-->
-
-=======
-             gallery links here
-            
->>>>>>> 52c292ab16aae45d86c67ed6c7fb7fea5cd0b04a
-            <div class="list-group">
-              <a href="gallery/gallery_race_1_howie.php" class="list-group-item list-group-item-action">Race Day 1 - Photos by Howie Choo (Saturday, 13th August 2016)</a>
-              <a href="gallery/gallery_race_1_spencer.php" class="list-group-item list-group-item-action">Race Day 1 - Photos by Spencer (Saturday, 13th August 2016)</a>
-              <a href="gallery/gallery_race_1_victor.php" class="list-group-item list-group-item-action">Race Day 1 - Photos by Victor Lim (Saturday, 13th August 2016)</a>
-              <a href="gallery/gallery_race_1_stanley.php" class="list-group-item list-group-item-action">Race Day 1 - Photos by Stanley Chee (Saturday, 13th August 2016)</a>
-            </div>
-
-            <div class="list-group">
-                <a href="gallery/gallery_race_2_howie.php" class="list-group-item list-group-item-action">Race Day 2 - Photos by Howie Choo (Sunday, 14th August 2016) </a>
-                <a href="gallery/gallery_race_2_victor.php" class="list-group-item list-group-item-action">Race Day 2 - Photos by Victor Lim (Sunday, 14th August 2016) </a>
-                <a href="gallery/gallery_race_2_stanley.php" class="list-group-item list-group-item-action">Race Day 2 - Photos by Stanley Chee (Sunday, 14th August 2016)</a>
-                <a href="gallery/gallery_race_2_william.php" class="list-group-item list-group-item-action">Race Day 2 - Photos by William Ong (Sunday, 14th August 2016) </a>
-            </div>
-
-            <div class="list-group">
-                <a href="gallery/gallery_race_3_howie.php" class="list-group-item list-group-item-action">Race Day 3 - Photos by Howie Choo (Saturday, 20th August 2016)</a>
-                <a href="gallery/gallery_race_3_spencer.php" class="list-group-item list-group-item-action">Race Day 3 - Photos by Spencer (Saturday, 20th August 2016)</a>
-            </div>
-            
-        </div>
-<<<<<<< HEAD
-
-      </section>
-
-  		<?php include('html-includes/footer_new.html');
-=======
--->
-          
-          
       <div class="standard-content">
+        <div class="accordion">
+          <div class="accordion__header gallery">
+            <h2>19th Western Circuit Regatta 2016</h2>
+          </div>
+          <div class="accordion__body">
+                <!--  nested accordion-->
+              <div class="accordion__content">
 
-          <div class="list-group">
-                <div class="list-group-item">
-                    <a href="#" class="links" id="link_1">Race Day 1 - Photos by Howie Choo (Saturday, 13th August 2016)</a>
-                </div>
-              
-                <div class="list-group-item">
-                    <a href="#" class="links" id="link_2">Race Day 1 - Photos by Spencer (Saturday, 13th August 2016)</a>
-                </div>    
-                <div class="list-group-item">
-                    <a href="#" class="links" id="link_3">Race Day 1 - Photos by Victor Lim (Saturday, 13th August 2016)</a>
-                </div>
-                <div class="list-group-item">
-                    <a href="#" class="links" id="link_3">Race Day 1 - Photos by Stanley Chee (Saturday, 13th August 2016)</a>
-                </div>
-                <div class="list-group-item">
-                    <a href="#" class="links" id="link_3">Race Day 2 - Photos by Howie Choo (Sunday, 14th August 2016)</a>
-                </div>
-                <div class="list-group-item">
-                    <a href="#" class="links" id="link_3">Race Day 2 - Photos by Victor Lim (Sunday, 14th August 2016)</a>
-                </div>
-                <div class="list-group-item">
-                    <a href="#" class="links" id="link_3">Race Day 2 - Photos by Stanley Chee (Sunday, 14th August 2016)</a>
-                </div>
-                <div class="list-group-item">
-                    <a href="#" class="links" id="link_3">Race Day 2 - Photos by William Ong (Sunday, 14th August 2016)</a> 
-                </div>
-                <div class="list-group-item">
-                    <a href="#" class="links" id="link_3">Race Day 3 - Photos by Howie Choo (Saturday, 20th August 2016)</a> 
-                </div>
-                <div class="list-group-item">
-                    <a href="#" class="links" id="link_3">Race Day 3 - Photos by Spencer (Saturday, 20th August 2016)</a> 
-                </div>
-          </div>
+                  <div class="accordion">
+                      <div class="accordion__header nested-header">
+                          Race Day 1 - Photos by Howie Choo (Saturday, 13th August 2016)
+                      </div>
 
+                      <div class="accordion__body nested__body">
+                          <div class="accordion__content nested__content">
+                              <iframe id="race-1-howie" src="//embedsocial.com/facebook_album/album_photos/710787272401657" width="100%" height="1500px" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
+                          </div>
+                      </div>
+                  </div>
 
-          
-          <!-- iframes-->
-          <div id="race-day-1-howie" class="race"> 
-                <iframe id="race-1-howie" src="//embedsocial.com/facebook_album/album_photos/710787272401657" width="100%" height="1500px" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
-          </div>
-          
-          <div id="race-day-1-spencer" class="race"> 
-                <iframe src="//embedsocial.com/facebook_album/album_photos/711141202366264" width="100%" height="1500px" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
-          </div>
-          
-          <div id="race-day-1-victor" class="race"> 
-                <iframe src="//embedsocial.com/facebook_album/album_photos/710795979067453" width="100%" height="1500px" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
-          </div>
-          
-          <div id="race-day-1-stanley" class="race"> 
-                <iframe src="//embedsocial.com/facebook_album/album_photos/710792845734433" width="100%" height="1500" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
-          </div>
-          
-          <div id="race-day-2-howie" class="race"> 
-               <iframe src="//embedsocial.com/facebook_album/album_photos/711675312312853" width="100%" height="1500" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
-          </div>
-          
-          <div id="race-day-2-victor" class="race"> 
-                <iframe src="//embedsocial.com/facebook_album/album_photos/710986009048450" width="100%" height="1500" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
-          </div>
-          
-          <div id="race-day-2-stanley" class="race"> 
-                <iframe src="//embedsocial.com/facebook_album/album_photos/710987639048287" width="100%" height="1500" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
-          </div>
-          
-          <div id="race-day-2-william" class="race">
-                <iframe src="//embedsocial.com/facebook_album/album_photos/710983365715381" width="100%" height="1500" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
-          </div>
-          
-          <div id="race-day-3-howie" class="race">
-                <iframe src="//embedsocial.com/facebook_album/album_photos/714722702008114" width="100%" height="1500" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe> 
-          </div>
+                  <div class="accordion">
+                      <div class="accordion__header nested-header">
+                          Race Day 1 - Photos by Spencer (Saturday, 13th August 2016)
+                      </div>
 
-          <div id="race-day-3-spencer" class="race">
-                <iframe src="//embedsocial.com/facebook_album/album_photos/714728758674175" width="100%" height="1500" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
+                      <div class="accordion__body nested__body">
+                          <div class="accordion__content nested__content">
+                               <iframe src="//embedsocial.com/facebook_album/album_photos/711141202366264" width="100%" height="1500px" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="accordion">
+                    <div class="accordion__header nested-header">
+                        Race Day 1 - Photos by Victor Lim (Saturday, 13th August 2016)
+                    </div>
+
+                    <div class="accordion__body nested__body">
+                      <div class="accordion__content nested__content">
+                        <iframe src="//embedsocial.com/facebook_album/album_photos/710795979067453" width="100%" height="1500px" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion">
+                      <div class="accordion__header nested-header">
+                          Race Day 1 - Photos by Stanley Chee (Saturday, 13th August 2016)
+                      </div>
+
+                      <div class="accordion__body nested__body">
+                          <div class="accordion__content nested__content">
+                               <iframe src="//embedsocial.com/facebook_album/album_photos/710792845734433" width="100%" height="1500" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="accordion">
+                      <div class="accordion__header nested-header">
+                          Race Day 2 - Photos by Howie Choo (Sunday, 14th August 2016)
+                      </div>
+
+                      <div class="accordion__body nested__body">
+                          <div class="accordion__content nested__content">
+                               <iframe src="//embedsocial.com/facebook_album/album_photos/711675312312853" width="100%" height="1500" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="accordion">
+                      <div class="accordion__header nested-header">
+                          Race Day 2 - Photos by Victor Lim (Sunday, 14th August 2016)
+                      </div>
+
+                      <div class="accordion__body nested__body">
+                          <div class="accordion__content nested__content">
+                               <iframe src="//embedsocial.com/facebook_album/album_photos/710986009048450" width="100%" height="1500" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="accordion">
+                      <div class="accordion__header nested-header">
+                          Race Day 2 - Photos by Stanley Chee (Sunday, 14th August 2016)
+                      </div>
+
+                      <div class="accordion__body nested__body">
+                          <div class="accordion__content nested__content">
+                               <iframe src="//embedsocial.com/facebook_album/album_photos/710987639048287" width="100%" height="1500" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="accordion">
+                      <div class="accordion__header nested-header">
+                          Race Day 2 - Photos by William Ong (Sunday, 14th August 2016)
+                      </div>
+
+                      <div class="accordion__body nested__body">
+                          <div class="accordion__content nested__content">
+                               <iframe src="//embedsocial.com/facebook_album/album_photos/710983365715381" width="100%" height="1500" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="accordion">
+                      <div class="accordion__header nested-header">
+                          Race Day 3 - Photos by Howie Choo (Saturday, 20th August 2016)
+                      </div>
+
+                      <div class="accordion__body nested__body">
+                          <div class="accordion__content nested__content">
+                                 <iframe src="//embedsocial.com/facebook_album/album_photos/714722702008114" width="100%" height="1500" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="accordion">
+                      <div class="accordion__header nested-header">
+                          Race Day 3 - Photos by Spencer (Saturday, 20th August 2016)
+                      </div>
+
+                      <div class="accordion__body nested__body">
+                          <div class="accordion__content nested__content">
+                               <iframe src="//embedsocial.com/facebook_album/album_photos/714728758674175" width="100%" height="1500" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- accordion skeleton
+                  <div class="accordion">
+                      <div class="accordion__header nested-header">
+
+                      </div>
+
+                      <div class="accordion__body nested__body">
+                          <div class="accordion__content nested__content">
+                            Nest your stuff here
+                          </div>
+                      </div>
+                  </div>
+                  End of accordion skeleton -->
+
+              </div>
+                 <!-- nested accordion -->
+            </div>
+        </div>
+
+        <div class="accordion">
+          <div class="accordion__header gallery">
+            <h2>18th Western Circuit Regatta 2015</h2>
           </div>
-          <!-- iframes-->
-          
+          <div class="accordion__body">
+            <div class="accordion__content">
+
+              <div class="accordion">
+                  <div class="accordion__header nested-header">
+                      Race Day 1 - Photos by Howie Choo (Saturday, 15th August 2015)
+                  </div>
+                  <div class="accordion__body nested__body">
+                      <div class="accordion__content nested__content">
+                           <iframe src="//embedsocial.com/facebook_album/album_photos/562027000611019" width="100%" height="1500" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0"></iframe>
+                      </div>
+                  </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
       </div>
-        
-      </section>
+    </main>
+    <?php include('html-includes/footer.html');?>
 
-        <?php include('html-includes/footer.html'); ?>
->>>>>>> 52c292ab16aae45d86c67ed6c7fb7fea5cd0b04a
-	  </div>
 	  <!-- Scripts -->
 	  <script src="dist/app.js"></script>
-      
-      <!-- Gallery Render js-->
-      <script>
-            $('a.links').click(function (e){
-                e.preventDefault();
-            var div_id = $('a.links').index($(this))
-                $('.race').hide().eq(div_id).show();
-            });      
-      </script>
+
   </body>
 </html>

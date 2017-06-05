@@ -15,10 +15,13 @@
 	}
 
 	.fullscreen-bg__video {
-	  position: absolute;
-	  top: 0;
-	  left: 0;
-	  width: 100%;
+		width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
 		display: block;
 	}
 
@@ -32,4 +35,22 @@
 		left: 50%;
 		transform: translateX(-50%) translateY(-50%);
 	}
+}
+
+.hero-text {
+	z-index: 50;
+	top: 45%;
+	position: absolute;
+	right: 50;
+	color: black;
+	opacity: 0.6;
+	text-align: right;
+}
+
+h2#countdownTimer {
+	font-size: 3rem;
+}
+
+h3#hero-text {
+	font-size: 2rem;
 }
