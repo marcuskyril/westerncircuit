@@ -80,7 +80,7 @@
         </div>
       </main>
 
-  		<?php include('html-includes/footer.html'); ?>?>
+  		<?php include('html-includes/footer.html'); ?>
 	  </div>
 	  <!-- Scripts -->
 	  <script src="dist/app.js"></script>
