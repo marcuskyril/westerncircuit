@@ -7,25 +7,8 @@
   </head>
   <body>
     <?php
-
-      // read json files
-      $class_list_string = file_get_contents("./assets/class-list.json");
-      $entry_list_string = file_get_contents("./assets/entry-list.json");
-
-      // function to format strings to camel case
-      function camelCase($str, array $noStrip = []) {
-        // non-alpha and non-numeric characters and apostrophes become spaces
-        $str = str_replace("'", "", $str);
-        $str = preg_replace('/[^a-z0-9' . implode("", $noStrip) . ']+/i', ' ', $str);
-        $str = trim($str);
-        // uppercase the first character of each word
-        $str = ucwords($str);
-
-        $str = str_replace(" ", "", $str);
-        $str = lcfirst($str);
-
-        return $str;
-      }
+      // do some fancy password protect shit
+      // firebase..?
     ?>
 
 	  <div class="standard-page" id="app">
