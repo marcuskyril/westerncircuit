@@ -8884,6 +8884,7 @@ textarea {
 }
 
 #header .title-logo {
+  margin-right: 5px;
   float: left;
 }
 
