@@ -1,4 +1,6 @@
-#intro, #gallery {
+#sec-content,
+#intro,
+#gallery {
   &.row {
     position: relative;
   }
@@ -9,6 +11,7 @@
   color: $white;
 }
 
+#sec-content,
 #intro,
 #gallery {
   .col-lg-6 {

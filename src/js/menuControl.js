@@ -5,10 +5,10 @@ let menuControl = {
 			e.preventDefault();
 			$('#header').removeClass("scrolled-100vh");
 			$('#overlay').removeClass('menu-overlay');
-			$('#nav-icon4').removeClass('open');
+			$('#nav-icon').removeClass('open');
 		});
 
-	  $('#nav-icon4').click(function(){
+	  $('#nav-icon').click(function(){
 			$('#header').addClass("scrolled-100vh");
 			$(this).toggleClass('open');
 			$('#overlay').toggleClass('menu-overlay');

@@ -1,8 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Francois+One|Lato:100,100i,300,300i,400,400i,700,700i,900,900i);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Francois+One|Lato:100,100i,300,300i,400,400i,700,700i,900,900i);@import url(https://fonts.googleapis.com/css?family=Montserrat:200,200i,300,400,700);@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -7739,7 +7740,6 @@ body {
 
 a {
   text-decoration: none;
-  padding: 5px;
 }
 
 img {
@@ -8011,7 +8011,8 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Francois One", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 200;
 }
 
 h4,
@@ -8022,7 +8023,7 @@ h6 {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 25px;
   line-height: 36px;
 }
 
@@ -8051,6 +8052,7 @@ p {
   font-family: "Lato", sans-serif;
   line-height: 24px;
   margin-bottom: 20px;
+  font-weight: 300;
 }
 
 figcaption {
@@ -8081,7 +8083,7 @@ blockquote {
 }
 
 .text-sec {
-  font-family: "Francois One", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .category {
@@ -8178,12 +8180,35 @@ blockquote {
 }
 
 .accordion__content:last-child {
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .countdown {
   background: linear-gradient(to right, #fff, #222);
   padding: 50px 0;
+}
+
+.organizer-container {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.organizer-container a, .organizer-container p, .organizer-container li {
+  color: #333333;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.organizer-container a:hover, .organizer-container p:hover, .organizer-container li:hover {
+  text-decoration: underline;
+}
+
+.organizer-container ul {
+  margin: 20px 0;
+}
+
+.organizer-container ul li {
+  margin: 10px 0;
 }
 
 .off-canvas-effect main,
@@ -8237,7 +8262,9 @@ blockquote {
   background: rgba(68, 68, 68, 0.95);
 }
 
-#intro.row, #gallery.row {
+#sec-content.row,
+#intro.row,
+#gallery.row {
   position: relative;
 }
 
@@ -8246,16 +8273,21 @@ blockquote {
   color: #ffffff;
 }
 
+#sec-content .col-lg-6,
 #intro .col-lg-6,
 #gallery .col-lg-6 {
   width: 50%;
 }
 
+#sec-content .col-lg-3,
 #intro .col-lg-3,
 #gallery .col-lg-3 {
   width: 25%;
 }
 
+#sec-content .col-lg-3,
+#sec-content .col-lg-6,
+#sec-content .col-sm-12,
 #intro .col-lg-3,
 #intro .col-lg-6,
 #intro .col-sm-12,
@@ -8267,6 +8299,7 @@ blockquote {
 }
 
 @media screen and (max-width: 768px) {
+  #sec-content .col-sm-12,
   #intro .col-sm-12,
   #gallery .col-sm-12 {
     width: 100%;
@@ -8850,8 +8883,17 @@ textarea {
   display: inline-block;
 }
 
+#header .title-logo {
+  float: left;
+}
+
+#header .title h1 {
+  float: left;
+  font-weight: 300;
+}
+
 #header .title h1 a {
-  color: #B1B2B4;
+  color: #666666;
 }
 
 #header span {
@@ -8860,7 +8902,8 @@ textarea {
 }
 
 #header img {
-  height: 75px;
+  height: 38px;
+  margin-right: 10px;
 }
 
 .scrolled {
@@ -8877,7 +8920,7 @@ textarea {
   margin-top: 0px;
 }
 
-#nav-icon4 {
+#nav-icon {
   width: 40px;
   height: 40px;
   position: relative;
@@ -8888,10 +8931,10 @@ textarea {
   cursor: pointer;
 }
 
-#nav-icon4 span {
+#nav-icon span {
   display: block;
   position: absolute;
-  height: 5px;
+  height: 3px;
   width: 100%;
   background: #d9534f;
   border-radius: 5px;
@@ -8902,25 +8945,25 @@ textarea {
   transition: .25s ease-in-out;
 }
 
-#nav-icon4 span:nth-child(1) {
+#nav-icon span:nth-child(1) {
   top: 0px;
   -webkit-transform-origin: left center;
   transform-origin: left center;
 }
 
-#nav-icon4 span:nth-child(2) {
+#nav-icon span:nth-child(2) {
   top: 10px;
   -webkit-transform-origin: left center;
   transform-origin: left center;
 }
 
-#nav-icon4 span:nth-child(3) {
+#nav-icon span:nth-child(3) {
   top: 20px;
   -webkit-transform-origin: left center;
   transform-origin: left center;
 }
 
-#nav-icon4.open span:nth-child(1) {
+#nav-icon.open span:nth-child(1) {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   top: -10px;
@@ -8928,12 +8971,12 @@ textarea {
   background-color: #B1B2B4;
 }
 
-#nav-icon4.open span:nth-child(2) {
+#nav-icon.open span:nth-child(2) {
   width: 0%;
   opacity: 0;
 }
 
-#nav-icon4.open span:nth-child(3) {
+#nav-icon.open span:nth-child(3) {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   top: 19px;
@@ -9124,12 +9167,8 @@ textarea {
   text-align: right;
 }
 
-h2#countdownTimer {
-  font-size: 3rem;
-}
-
-h3#hero-text {
-  font-size: 2rem;
+h1#hero-text {
+  font-weight: 300;
 }
 
 .card {
@@ -9137,6 +9176,21 @@ h3#hero-text {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   padding: 20px;
+}
+
+.card.organizer-wrapper {
+  padding: 20px;
+  margin: 0;
+  box-shadow: none;
+}
+
+.card.organizer-wrapper img {
+  height: 150px;
+}
+
+.card.organizer-wrapper .organizer-content {
+  margin-top: 20px;
+  text-align: center;
 }
 
 .card:hover {
@@ -9236,7 +9290,7 @@ h3#hero-text {
   margin: 0;
   padding: 30px 0;
   font-size: 24px;
-  font-family: "Francois One", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: normal;
   color: #ffffff;
 }
@@ -9288,7 +9342,7 @@ h3#hero-text {
 
 .section__title {
   font-size: 24px;
-  font-family: "Francois One", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #ffffff;
 }
 
@@ -9310,7 +9364,7 @@ h3#hero-text {
   }
 }
 
-section#intro > :after, section#gallery > :after {
+section#intro > :after, section#gallery > :after, section#sec-content > :after {
   content: '';
   clear: both;
   display: table;
@@ -9751,6 +9805,14 @@ footer:after,
   background-position-y: 40%;
 }
 
+.slick-slider, .slick-list, .slick-track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
 .slick-arrow {
   position: absolute;
   font-size: 0;
@@ -9922,7 +9984,7 @@ footer:after,
 }
 
 .tabs li a {
-  font-family: "Francois One", sans-serif;
+  font-family: "Montserrat", sans-serif;
   padding: 12px;
   font-size: 18px;
   color: #ffffff;

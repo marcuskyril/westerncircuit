@@ -13808,8 +13808,6 @@ sectionAccordion.init();
 /* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
-//let firebase = require('firebase');
-
 var auth = {
   logout: function logout() {
     firebase.auth().signOut().then(function () {
@@ -13839,14 +13837,6 @@ var auth = {
   },
   init: function init() {
 
-    // var config = {
-    //   apiKey: "AIzaSyAe0NDUtusANEBwDxnLOV-iX67uhQ9cmzg",
-    //   authDomain: "westerncircuit-576a1.firebaseapp.com",
-    //   databaseURL: "https://westerncircuit-576a1.firebaseio.com",
-    //   projectId: "westerncircuit-576a1",
-    //   storageBucket: "westerncircuit-576a1.appspot.com",
-    //   messagingSenderId: "911340903389"
-    // };
     var config = __webpack_require__(30);
 
     firebase.initializeApp(config);
@@ -13969,7 +13959,7 @@ $(function () {
 
 var countdown = {
   init: function init() {
-    $("#countdownTimer").countdown("2017/12/12", function (event) {
+    $("#countdownTimer").countdown("2017/08/19", function (event) {
       $(this).text(event.strftime('%D DAYS %H HRS %M MINS %S SECS'));
     });
   }
@@ -18535,10 +18525,10 @@ var menuControl = {
 			e.preventDefault();
 			$('#header').removeClass("scrolled-100vh");
 			$('#overlay').removeClass('menu-overlay');
-			$('#nav-icon4').removeClass('open');
+			$('#nav-icon').removeClass('open');
 		});
 
-		$('#nav-icon4').click(function () {
+		$('#nav-icon').click(function () {
 			$('#header').addClass("scrolled-100vh");
 			$(this).toggleClass('open');
 			$('#overlay').toggleClass('menu-overlay');
