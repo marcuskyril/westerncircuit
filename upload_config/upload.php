@@ -10,12 +10,6 @@
     $documentName = $_POST['documentName'];
   }
 
-  // write to json file
-
-  // if($uploadType == 'documentation') {
-  //
-  // }
-
   // replace all spaces with _
   $documentName = str_replace(" ", "_", $documentName);
 
