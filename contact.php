@@ -6,7 +6,7 @@
 	  <link rel="stylesheet" href="dist/app.css">
   </head>
   <body>
-	  <div id="app">
+	  <div class="standard-page" id="app">
   		<?php include('html-includes/navigation.html'); ?>
       <section class="landing__banner-bar">
         <div class="container">
@@ -19,7 +19,7 @@
       </section>
 
       <section>
-        <div class="standard-content">
+        <div class="standard-content clearfix">
           <div class="left">
             <p>Jinella Chua</br>
               <a href="jinellachua@smu.edu.sg">jinellachua@smu.edu.sg</a>
@@ -46,7 +46,10 @@
             </p>
           </div>
         </div>
+
         <div class="standard-content">
+          <hr />
+
   				<h2>Getting there</h2>
           <p>Raffles Marina lies on the western tip of Singapore.</p>
 

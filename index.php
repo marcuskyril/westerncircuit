@@ -12,7 +12,7 @@
         <section class="hero-container">
           <div class="hero-text">
             <h2 id="countdownTimer"></h2>
-            <h3 id="hero-text">to Western Circuit 2017</h3>
+            <h1 id="hero-text">to the 20th SMU-RM Western Circuit 2017</h1>
           </div>
           <video loop muted autoplay class="fullscreen-bg__video">
             <source src="img/hero-video-2.mp4"/>
@@ -26,14 +26,24 @@
               <div class="content align-center">
                 <div class="text-wrapper">
                   <h2>About us</h2>
-                  <p>La preuve que le petit prince a existé c’est qu’il était ravissant, qu’il riait,
-                    et qu’il voulait un mouton. Quand on veut un mouton, c’est la preuve qu’on existe.</p>
+                  <p>
+                    Supported by the Singapore Sailing Federation (SSF),
+                    the SMU-RM Western Circuit Sailing Regatta is one of
+                    the largest keelboat sailing events and has become well
+                    known for its tactically challenging race courses and
+                    fun-filled post-race parties. 
+                  </p>
                 </div>
               </div>
             </div>
             <div class="col-lg-6 col-sm-12">
-              <!-- <img src="./img/carousel_img_4.jpg" /> -->
-              <div class="block-img" id="intro-img"></div>
+              <div class="block-img" >
+                <div class="carousel">
+                  <div class="carousel__item" style="background-image: url(img/carousel_img_2.jpg);"></div>
+                  <div class="carousel__item" style="background-image: url(img/carousel_img_5.jpg);"></div>
+                  <div class="carousel__item" style="background-image: url(img/carousel_img_6.jpg);"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -49,7 +59,7 @@
                 <div class="text-wrapper">
                   <h2>Test</h2>
                   <p>La preuve que le petit prince a existé c’est qu’il était ravissant, qu’il riait,
-                    et qu’il voulait un mouton. Quand on veut un mouton, c’est la preuve qu’on existe.</p>
+                    et qu’il voulait un mouton.</p>
                 </div>
               </div>
             </div>
@@ -61,22 +71,27 @@
                 <div class="text-wrapper">
                   <h2>Test</h2>
                   <p>La preuve que le petit prince a existé c’est qu’il était ravissant, qu’il riait,
-                    et qu’il voulait un mouton. Quand on veut un mouton, c’est la preuve qu’on existe.</p>
+                    et qu’il voulait un mouton.</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section id="intro">
+      <section id="sec-content">
         <div class="container-fluid">
           <div class="row">
             <div class="col-lg-6 col-sm-12">
               <div class="content align-center">
                 <div class="text-wrapper">
-                  <h2>Test</h2>
-                  <p>La preuve que le petit prince a existé c’est qu’il était ravissant, qu’il riait,
-                    et qu’il voulait un mouton. Quand on veut un mouton, c’est la preuve qu’on existe.</p>
+                  <h2>Shorthanded?</h2>
+                  <p>
+                    Want to crew for a boat at the Western Circuit Sailing Regatta?
+                    Or need more sailors onboard your boat? Simply email your name,
+                    contact number, email and sailing experience
+                    to <a href="sailing@sa.smu.edu.sg">sailing@sa.smu.edu.sg</a>
+                    to advertise your wares on this page!
+                  </p>
                 </div>
               </div>
             </div>

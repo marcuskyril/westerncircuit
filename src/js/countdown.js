@@ -1,7 +1,7 @@
 var countdown = {
   init() {
     $("#countdownTimer")
-    .countdown("2017/12/12", function(event) {
+    .countdown("2017/08/19", function(event) {
       $(this).text(
         event.strftime('%D DAYS %H HRS %M MINS %S SECS')
       );

@@ -82,6 +82,8 @@ select {
 }
 
 input[type="text"],
+input[type="email"],
+input[type="password"],
 textarea {
 	padding: 10px 17px 10px 20px;
 	border: solid 1px $divider-grey;

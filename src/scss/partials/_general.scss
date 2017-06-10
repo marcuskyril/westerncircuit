@@ -12,7 +12,7 @@ body {
 
 a {
 	text-decoration: none;
-	padding: 5px;
+	// padding: 5px;
 }
 
 img {
@@ -29,9 +29,13 @@ hr {
 	margin: 50px auto;
 }
 
-p.success-message {
+p.success-message, p.error-message {
 	font-style: italic;
 	margin-top: 10px;
+}
+
+p.error-message {
+	color: $fuck-yeah-red;
 }
 
 

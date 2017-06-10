@@ -1,1 +1,3 @@
-# westerncircuit2017
+# Western Circuit 2017
+
+Work in progress!

@@ -7,7 +7,6 @@
   </head>
   <body>
     <?php
-      // this page needs to be password protected!
 
       // read json files
       $class_list_string = file_get_contents("./assets/class-list.json");
@@ -60,7 +59,6 @@
           </section>
 
           <?php
-            // $json_string = file_get_contents("./assets/class-list.json");
             $json = json_decode($class_list_string, true);
 
             if(isset($_GET['class'])) {
@@ -108,9 +106,7 @@
           </section>
 
           <?php
-            //$entry_list_string = file_get_contents("./assets/entry-list.json");
             $entry_list_json = json_decode($entry_list_string, true);
-            //$class_list_string = file_get_contents("./assets/class-list.json");
             $class_list_json = json_decode($class_list_string, true);
 
             if(isset($_POST['sailID']) && isset($_POST['yachtName']) && isset($_POST['skipperName'])) {
@@ -147,7 +143,7 @@
             <form action="#" method="post" enctype="multipart/form-data">
               <div class="input-group">
                 <input type="text" name="documentName" placeholder="Document name" required />
-                <select name="uploadType" required>
+                <select name="uploadType" id="documentType" required>
                   <option value="">Select document type</option>
                   <option value="media">Media</option>
                   <option value="results">Results</option>
@@ -157,15 +153,31 @@
                 <button class="btn" type="submit">Submit</button>
               </div>
         		</form>
-            <?php include('upload.php'); ?>
+            <?php include('./upload_config/upload.php'); ?>
           </section>
+
+          <hr />
+          <section>
+            <div class="input-group">
+              <button id="logout" class="btn">Logout</button>
+            </div>
+          </section
+
         </div>
       </main>
 
 		  <?php include('./html-includes/footer.html'); ?>
 	  </div>
-
 	  <script src="dist/app.js"></script>
+    <script>
+      // Authentication script
+      firebase.auth().onAuthStateChanged(function(currentUser) {
+        if (!currentUser) {
+          window.location = './login.php';
+        }
+      });
+      // authentication script
+    </script>
 
   </body>
 </html>
