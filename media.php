@@ -34,29 +34,32 @@
                   Download(s)
                 </th>
               </tr>
+                
               <tr>
-                <td>
-                  Western Bugle Day 1
-                </td>
-                <td>
-                  <a href="pdf/19th_WCSR_Newsletter_Day1.pdf"><i class="fa fa-file-pdf-o"></i></a>
-                </td>
-              </tr>
-              <tr>
-                 <td>
-                  Western Bugle Day 2
-                </td>
-                <td>
-                  <a href="pdf/19th_WCSR_Newsletter_Day2.pdf"><i class="fa fa-file-pdf-o"></i></a>
-                </td>
-              </tr>
-              <tr>
-                 <td>
-                  Western Bugle Day 3
-                </td>
-                <td>
-                  <a href="pdf/19th_WCSR_Newsletter_Day3.pdf"><i class="fa fa-file-pdf-o"></i></a>
-                </td>
+                <?php
+                    $json_string = file_get_contents("./assets/media-list.json");
+                    $json = json_decode($json_string, true);
+
+                    foreach ($json as $documentName => $filePaths) {
+                      echo '<tr><td>'.$documentName.'</td><td>';
+
+                      foreach ($filePaths['filePaths'] as $filePath) {
+
+                        $fileType = substr(strrchr($filePath,'.'),1);
+
+                        $iconArr = array(
+                                        "pdf" => "fa fa-file-pdf-o",
+                                        "doc" => "fa fa-file-word-o",
+                                        "docx" => "fa fa-file-word-o"
+                                      );
+
+                        echo '<a href="'.$filePath.'"><i class="'.$iconArr[$fileType].'"></i></a>';
+                      }
+
+                      echo '</td></tr>';
+                    }
+                ?>
+                
               </tr>
 
             </tbody>
