@@ -143,7 +143,7 @@
             <form action="#" method="post" enctype="multipart/form-data">
               <div class="input-group">
                 <input type="text" name="documentName" placeholder="Document name" required />
-                <select name="uploadType" required>
+                <select name="uploadType" id="documentType" required>
                   <option value="">Select document type</option>
                   <option value="media">Media</option>
                   <option value="results">Results</option>

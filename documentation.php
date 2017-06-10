@@ -24,59 +24,38 @@
 
       <main>
         <div class="standard-content">
-  				<table width="100%">
+          <table width="100%">
             <tbody>
               <tr>
-                <th>
-                  Document
-                </th>
-                <th>
-                  Download(s)
-                </th>
+                <th>Document</th>
+                <th>Download(s)</th>
               </tr>
-              <tr>
-                <td>
-                  Notice of Race 2016
-                </td>
-                <td>
-                  <a href=""><i class="fa fa-file-word-o"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  19th WCSR Online Course Book
-                </td>
-                <td>
-                  <a href=""><i class="fa fa-file-pdf-o"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  19th WCSR Official Entry Forms
-                </td>
-                <td>
-                  <a href=""><i class="fa fa-file-pdf-o"></i></a>
-                  <a href=""><i class="fa fa-file-word-o"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  19th WCSR Boat Charter Form SB20
-                </td>
-                <td>
-                  <a href=""><i class="fa fa-file-pdf-o"></i></a>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  19th WCSR Sailing Instructions
-                </td>
-                <td>
-                  <a href=""><i class="fa fa-file-pdf-o"></i></a>
-                </td>
-              </tr>
-            </tbody>
-          </table>
+
+              <?php
+                $json_string = file_get_contents("./assets/documentation-list.json");
+                $json = json_decode($json_string, true);
+
+                foreach ($json as $documentName => $filePaths) {
+                  echo '<tr><td>'.$documentName.'</td><td>';
+
+                  foreach ($filePaths['filePaths'] as $filePath) {
+
+                    $fileType = substr(strrchr($filePath,'.'),1);
+
+                    $iconArr = array(
+                                    "pdf" => "fa fa-file-pdf-o",
+                                    "doc" => "fa fa-file-word-o",
+                                    "docx" => "fa fa-file-word-o"
+                                  );
+
+                    echo '<a href="'.$filePath.'"><i class="'.$iconArr[$fileType].'"></i></a>';
+                  }
+
+                  echo '</td></tr>';
+                }
+              ?>
+              </tbody>
+            </table>
         </div>
       </main>
 

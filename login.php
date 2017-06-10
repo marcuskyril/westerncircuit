@@ -32,7 +32,7 @@
             </div>
           </form>
 
-          <p class="error-message"></p>
+          <p id="login-error" class="error-message"></p>
         </div>
       </main>
 

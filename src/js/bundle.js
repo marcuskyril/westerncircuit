@@ -11,6 +11,7 @@ require('./libraries/jquery.fileuploader.js');
 // Require our js files.
 require('./auth.js');
 require('./fileUploader');
+require('./dashboard');
 require('./offcanvas');
 require('./accordion');
 require('./countdown');

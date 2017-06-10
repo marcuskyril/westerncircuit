@@ -16,13 +16,16 @@ let auth = {
 
     }).catch(function(error) {
       // Handle Errors here.
-      var target = $('p#error-message');
+
+      console.log(error);
+      var target = $('p#login-error');
       var errorCode = error.code;
       var errorMessage = error.message;
 
       if (errorCode === 'auth/wrong-password') {
         target.text('Oh snap. Wrong password.');
       } else {
+        console.log(errorMessage);
         target.text(errorMessage);
       }
       target.text(error);

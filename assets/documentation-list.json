@@ -1,0 +1,32 @@
+{
+  "Notice of Race 2016": {
+    "filePaths": [
+      "./assets/documentation/test.docx",
+      "./assets/documentation/Buenos_dias.pdf"
+    ]
+  },
+  "19th WCSR Online Course Book": {
+    "filePaths": [
+      "./assets/documentation/Something_cool.pdf",
+      "./assets/documentation/Buenos_dias.pdf"
+    ]
+  },
+  "19th WCSR Official Entry Forms": {
+    "filePaths": [
+      "./assets/documentation/test.docx",
+      "./assets/documentation/Buenos_dias.pdf"
+    ]
+  },
+  "19th WCSR Boat Charter Form SB20": {
+    "filePaths": [
+      "./assets/documentation/Something_cool.pdf",
+      "./assets/documentation/Buenos_dias.pdf"
+    ]
+  },
+  "19th WCSR Sailing Instructions": {
+    "filePaths": [
+      "./assets/documentation/Something_cool.pdf",
+      "./assets/documentation/Buenos_dias.pdf"
+    ]
+  }
+}
