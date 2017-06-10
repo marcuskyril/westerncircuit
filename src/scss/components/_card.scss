@@ -4,6 +4,12 @@
 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 	padding: 20px;
 
+	@at-root {
+		#{&}-horizontal {
+			display: table;
+		}
+	}
+
 	&.organizer-wrapper {
     padding: 20px;
 		margin: 0;

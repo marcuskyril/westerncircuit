@@ -82,19 +82,19 @@
 			font-weight: 300;
 
 			a {
-				// color: #B1B2B4;
 				color: $caption-grey;
 			}
 		}
 	}
 
 	span {
-		display: table-cell;
+		display: block;
 		vertical-align: middle;
+		line-height: 0.8;
 	}
 
 	img {
-		height: 38px;
+		height: 40px;
 		margin-right: 10px;
 	}
 }

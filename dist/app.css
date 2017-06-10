@@ -8581,12 +8581,19 @@ th {
   background-color: #dff0d8;
 }
 
-.sponsor-content {
-  margin-bottom: 30px;
+.sponsor-thumbnail, .sponsor-content {
+  display: table-cell;
+  width: 30%;
+  vertical-align: middle;
 }
 
-.sponsor-content img {
-  margin: 30px 0;
+.sponsor-thumbnail img, .sponsor-content img {
+  width: 100%;
+  padding-right: 20px;
+}
+
+.sponsor-content {
+  width: 70%;
 }
 
 .entry {
@@ -8898,12 +8905,13 @@ textarea {
 }
 
 #header span {
-  display: table-cell;
+  display: block;
   vertical-align: middle;
+  line-height: 0.8;
 }
 
 #header img {
-  height: 38px;
+  height: 40px;
   margin-right: 10px;
 }
 
@@ -9177,6 +9185,10 @@ h1#hero-text {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   padding: 20px;
+}
+
+.card-horizontal {
+  display: table;
 }
 
 .card.organizer-wrapper {
@@ -9887,7 +9899,7 @@ footer:after,
 }
 
 .landing__banner-bar {
-  background: linear-gradient(to right, #555555, #ffffff);
+  background: url("../../img/landing-bar.jpg");
   background-size: cover;
   padding: 28px 0;
   margin: 100 0 30px;
@@ -9966,7 +9978,6 @@ footer:after,
 
 .tabs {
   padding-top: 25px;
-  text-align: center;
 }
 
 @media only screen and (min-width: 768px) {

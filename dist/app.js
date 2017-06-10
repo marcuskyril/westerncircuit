@@ -18674,7 +18674,9 @@ var tabs = {
 	toggleTabs: function toggleTabs() {
 		var that = this;
 
-		$('.tabs li').click(function () {
+		$('.tabs li').click(function (e) {
+
+			e.preventDefault();
 
 			$('.tabs li, .tabs-content').removeClass('active');
 			$(this).addClass('active');
