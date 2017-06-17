@@ -11,16 +11,11 @@
           
         
         <section class="hero-container">
-<!--          <div class="hero-text">-->
-<!--            <h2 id="countdownTimer"></h2>-->
-<!--            <h1 id="hero-text">to the 20th SMU-RM Western Circuit 2017</h1>-->
-<!--          </div>-->
-<!--
-        <video loop muted autoplay class="fullscreen-bg__video">
-            <source src="img/hero-video-2.mp4"/>
-        </video>
--->
-            <div id="particles"></div>
+
+            
+        <!-- particles-->
+        <div id="particles"></div>
+            
         <div class="error-text">
             <div class="error">
                 <div class="error-code m-b-10 m-t-20">404 <i class="fa fa-warning"></i></div>
