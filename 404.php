@@ -25,9 +25,9 @@
                     Sorry, but the page you are looking for was either not found or does not exist. <br/>
                     Try refreshing the page or click the button below to go back to the Homepage.
                     <div>
-                        <a href="./index.php">
-                                <i class="fa fa-arrow-left"></i>
-                                Go back to Homepage                      
+                        <a href="./index.php"> 
+                            Go back to Homepage   
+                             <i class="fa fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
