@@ -21,5 +21,6 @@ require('./callout');
 require('./carousel');
 require('./table-content-tab');
 require('./tabs');
+require('./particles');
 
 $('select').niceSelect();
