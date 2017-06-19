@@ -1,0 +1,257 @@
+{
+  "2016": [
+    {
+      "category": "President's Cup",
+      "results": [
+        {
+          "name": "Overall Race Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        }
+      ]
+    }, {
+      "category": "Inter-Tertiary Windsurfing Cup",
+      "results": [
+        {
+          "name": "Overall Race Results",
+          "location": "./assets/results/test.doc"
+        }
+      ]
+    }, {
+      "category": "IRC A",
+      "results": [
+        {
+          "name": "Overall Race Results",
+          "location": "./assets/results/test.docx"
+        },
+        {
+          "name": "Day 1 Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        },
+        {
+          "name": "Day 2 Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        },
+        {
+          "name": "Day 3 Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        }
+      ]
+    }, {
+      "category": "IRC B",
+      "results": [
+        {
+          "name": "Overall Race Results",
+          "location": "./assets/results/test.docx"
+        },
+        {
+          "name": "Day 1 Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        },
+        {
+          "name": "Day 2 Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        },
+        {
+          "name": "Day 3 Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        }
+      ]
+    }, {
+      "category": "SB20",
+      "results": [
+        {
+          "name": "Overall Race Results",
+          "location": "./assets/results/test.docx"
+        },
+        {
+          "name": "Day 1 Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        },
+        {
+          "name": "Day 2 Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        },
+        {
+          "name": "Day 3 Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        }
+      ]
+    }, {
+      "category": "PY",
+      "results": [
+        {
+          "name": "Overall Race Results",
+          "location": "./assets/results/test.docx"
+        },
+        {
+          "name": "Day 1 Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        },
+        {
+          "name": "Day 2 Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        },
+        {
+          "name": "Day 3 Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        }
+      ]
+    }, {
+      "category": "Trimaran",
+      "results": [
+        {
+          "name": "Overall Race Results",
+          "location": "./assets/results/test.docx"
+        },
+        {
+          "name": "Day 1 Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        },
+        {
+          "name": "Day 2 Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        },
+        {
+          "name": "Day 3 Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        }
+      ]
+    }, {
+      "category": "Novice (Men)",
+      "results": [
+        {
+          "name": "Day 1 Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        },
+        {
+          "name": "Day 2 Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        }
+      ]
+    }, {
+      "category": "Novice (Women)",
+      "results": [
+        {
+          "name": "Day 1 Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        },
+        {
+          "name": "Day 2 Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        }
+      ]
+    }, {
+      "category": "Intermediate (Men)",
+      "results": [
+        {
+          "name": "Day 1 Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        },
+        {
+          "name": "Day 2 Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        }
+      ]
+    }, {
+      "category": "Intermediate (Women)",
+      "results": [
+        {
+          "name": "Day 1 Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        },
+        {
+          "name": "Day 2 Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        }
+      ]
+    }, {
+      "category": "Intermediate (Mixed)",
+      "results": [
+        {
+          "name": "Day 1 Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        },
+        {
+          "name": "Day 2 Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        }
+      ]
+    }, {
+      "category": "RSOne",
+      "results": [
+        {
+          "name": "Day 1 Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        },
+        {
+          "name": "Day 2 Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        }
+      ]
+    }, {
+      "category": "Access 2.3",
+      "results": [
+        {
+          "name": "Day 1 Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        },
+        {
+          "name": "Day 2 Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        }
+      ]
+    }
+  ],
+
+  "2015": [
+    {
+      "category": "President's Cup",
+      "results": [
+        {
+          "name": "Overall Race Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        }
+      ]
+    }, {
+      "category": "IRC A",
+      "results": [
+        {
+          "name": "Overall Race Results",
+          "location": "./assets/results/presidents_cup.pdf"
+        },
+        {
+          "name": "Race 1",
+          "location": "./assets/results/presidents_cup.pdf"
+        },
+        {
+          "name": "Race 2",
+          "location": "./assets/results/presidents_cup.pdf"
+        },
+        {
+          "name": "Race 3",
+          "location": "./assets/results/presidents_cup.pdf"
+        },
+        {
+          "name": "Race 4",
+          "location": "./assets/results/presidents_cup.pdf"
+        },
+        {
+          "name": "Race 5",
+          "location": "./assets/results/presidents_cup.pdf"
+        },
+        {
+          "name": "Race 6",
+          "location": "./assets/results/presidents_cup.pdf"
+        },
+        {
+          "name": "Race 7",
+          "location": "./assets/results/presidents_cup.pdf"
+        },
+        {
+          "name": "Race 8",
+          "location": "./assets/results/presidents_cup.pdf"
+        }
+      ]
+    }
+  ]
+}

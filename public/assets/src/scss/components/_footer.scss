@@ -1,0 +1,33 @@
+.footer-primary {
+	padding: 50px 0;
+	background-color: $body-copy-grey;
+	width: 100%;
+
+	.footer-links, .footer-logo {
+		img {
+			height: 45px;
+			margin: 15px;
+		}
+	}
+}
+
+.footer-secondary {
+	padding: 5px 0;
+	background-color: $white;
+
+ 	p {
+		margin-bottom: 0px;
+		font-size: 14px;
+ 	}
+
+	.show-md-down {
+		display: inline;
+	}
+
+	@include grid-media($md-grid) {
+		.show-md-down {
+			display: none;
+		}
+	}
+
+}

@@ -1,0 +1,21 @@
+{
+    "IRC B": [{
+        "sailID": "13",
+        "yachtName": "12111",
+        "skipperName": "34"
+    }],
+    "IRC A": [{
+        "sailID": "Yumcha",
+        "yachtName": "Fuck yeah",
+        "skipperName": "Fuck no"
+    }, {
+        "sailID": "fadfa",
+        "yachtName": "fdafafa",
+        "skipperName": "dafdafad"
+    }],
+    "Trimaran (Multihull)": [{
+        "sailID": "ewqq",
+        "yachtName": "222",
+        "skipperName": "reewewt"
+    }]
+}
