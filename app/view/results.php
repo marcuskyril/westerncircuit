@@ -54,9 +54,9 @@
     $json = json_decode($json_string, true);
 
     if($year === "2016") {
-      echo '<div id="'.$year.'" class="tabs-content active">';
+      echo '<div id="'.$year.'" class="tabs-content result-list active">';
     }  else {
-      echo '<div id="'.$year.'" class="tabs-content">';
+      echo '<div id="'.$year.'" class="tabs-content result-list">';
     }
 
     foreach ($json as $eventName => $resultList) {

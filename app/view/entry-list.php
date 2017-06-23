@@ -52,9 +52,9 @@
     $json = json_decode($json_string, true);
 
     if($year === "2017") {
-      echo '<div id="'.$year.'" class="tabs-content active">';
+      echo '<div id="'.$year.'" class="tabs-content entry-list active">';
     }  else {
-      echo '<div id="'.$year.'" class="tabs-content">';
+      echo '<div id="'.$year.'" class="tabs-content entry-list">';
     }
 
     foreach ($json as $class => $entries) {

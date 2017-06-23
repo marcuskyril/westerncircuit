@@ -122,10 +122,11 @@
 
             <form id="doc-upload-form" action="#" method="post" enctype="multipart/form-data">
               <div class="input-group">
+                <input type="hidden" name="documentation" value="documentation"/>
                 <div class="doc-toggle">
                   <a class="active" id="new-doc" href="javascript:void(0)">Add to new folder</a> | <a id="existing-doc" href="javascript:void(0)">Add to existing folder</a>
                 </div>
-                <input type="text" name="documentName" placeholder="Document name" required />
+                <input type="text" class="active" name="documentName" placeholder="Document name" />
                 <?php
                   renderDocumentationList();
                 ?>
@@ -142,10 +143,11 @@
 
             <form id="media-upload-form" action="#" method="post" enctype="multipart/form-data">
               <div class="input-group">
+                <input type="hidden" name="media" value="media"/>
                 <div class="media-toggle">
                   <a class="active" id="new-media" href="javascript:void(0)">Add to new folder</a> | <a id="existing-media" href="javascript:void(0)">Add to existing folder</a>
                 </div>
-                <input type="text" name="mediaName" placeholder="Media name" required />
+                <input type="text" class="active" name="mediaName" placeholder="Media name" />
                 <?php
                   renderMediaList();
                 ?>
@@ -198,24 +200,24 @@
     $documentation_list_string = file_get_contents("./assets/documentation-list.json");
     $documentation_list_json = json_decode($documentation_list_string, true);
 
-    echo '<select id="documentation-list" name="documentName"><option name="default" value="">Select document</option>';
+    echo '<div class="nice-select-container"><select id="documentation-list" name="existingDocumentName"><option name="default" value="">Select document</option>';
 
     foreach ($documentation_list_json as $key => $value) {
       echo '<option value="'.$key.'">'.$key.'</option>';
     }
-    echo '</select>';
+    echo '</select></div>';
   }
 
   function renderMediaList() {
     $media_list_string = file_get_contents("./assets/media-list.json");
     $media_list_json = json_decode($media_list_string, true);
 
-    echo '<select id="media-list" name="media"><option name="default" value="">Select media</option>';
+    echo '<div class="nice-select-container"><select id="media-list" name="existingMediaName"><option name="default" value="">Select media</option>';
 
     foreach ($media_list_json as $key => $value) {
       echo '<option value="'.$key.'">'.$key.'</option>';
     }
-    echo '</select>';
+    echo '</select></div>';
   }
 
   function renderClassList() {

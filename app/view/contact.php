@@ -53,7 +53,7 @@
 
           <div class="card card-horizontal">
 
-            <div class="sponsor-content" style="width: 50%">
+            <div class="contact-content">
               <h2>Getting there</h2>
               <p>Raffles Marina lies on the western tip of Singapore.</p>
 
@@ -62,7 +62,7 @@
               <p>Contacts: VHF 77 (Call 'Raffles Marina')</p>
             </div>
 
-            <div class="sponsor-thumbnail" style="width: 50%">
+            <div class="contact-thumbnail">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7248539943334!2d103.63312471535352!3d1.3414475619745878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da08b3523fd329%3A0xf29ee348ec5c1811!2s10+Tuas+West+Dr%2C+Singapore+638404!5e0!3m2!1sen!2ssg!4v1497675135996" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
           </div>

@@ -4,65 +4,44 @@
   $documentName = '';
   $uploadType = '';
 
-  // get POST inputs
-  if((isset($_POST['uploadType']) && isset ($_POST['documentName']))){
-    // for media/documentation
-    $uploadType = $_POST['uploadType'];
-    $documentName = $_POST['documentName'];
+  if(isset($_POST['fileuploader-list-files'])) {
     $fileName = $_POST['fileuploader-list-files'];
     $ext = substr(pathinfo($fileName, PATHINFO_EXTENSION), 0, -2);
+  }
 
-    if($uploadType === 'media') {
-      // media
-      $path = "./assets/media-list.json";
-      $media_list_string = file_get_contents($path);
-      $media_list_json = json_decode($media_list_string, true);
-      $mediaName = $documentName;
-      $documentName = str_replace(" ", "_", $documentName);
-      $arr = array('./assets/media/'.$documentName.'.'.$ext);
-      $media_details = array('filePaths' => $arr);
-      $toEncode = array($mediaName => $media_details);
+  if(isset($_POST['documentation'])) {
+    $uploadType = 'documentation';
 
-      if(!empty($media_list_json)) {
-        // class/category does not exist in result list
-        if(!isset($media_list_json[$mediaName])) {
-          $edited_json = array_merge($media_list_json, $toEncode);
-          file_put_contents($path, json_encode($edited_json));
-        } else {
-          // add entry to existing class/category
-          array_push($media_list_json[$mediaName]['filePaths'], './assets/media/'.$documentName.'.'.$ext);
-          file_put_contents($path, json_encode($media_list_json));
-        }
-      } else {
-        file_put_contents($path, json_encode($toEncode));
-      }
-
-    } else {
-      // documentation
-      $path = "./assets/documentation-list.json";
-      $documentation_list_string = file_get_contents($path);
-      $documentation_list_json = json_decode($documentation_list_string, true);
-      $docName = $documentName;
-      $documentName = str_replace(" ", "_", $documentName);
-      $arr = array('./assets/documentation/'.$documentName.'.'.$ext);
-      $document_details = array('filePaths' => $arr);
-      $toEncode = array($docName => $document_details);
-
-      if(!empty($documentation_list_json)) {
-        // class/category does not exist in result list
-        if(!isset($documentation_list_json[$docName])) {
-          $edited_json = array_merge($documentation_list_json, $toEncode);
-          file_put_contents($path, json_encode($edited_json));
-        } else {
-          // add entry to existing class/category
-          array_push($documentation_list_json[$docName]['filePaths'], './assets/documentation/'.$documentName.'.'.$ext);
-          file_put_contents($path, json_encode($documentation_list_json));
-        }
-      } else {
-        file_put_contents($path, json_encode($toEncode));
-      }
-
+    if(strlen($_POST['documentName']) > 0) {
+      $documentName = $_POST['documentName'];
     }
+
+    if(strlen($_POST['existingDocumentName']) > 0) {
+      $documentName = $_POST['existingDocumentName'];
+    }
+
+    $docName = $documentName;
+    $documentName = str_replace(" ", "_", $documentName);
+
+    writeToJSON($uploadType, $docName, $documentName, $ext);
+
+  } else if(isset($_POST['media'])) {
+    $uploadType = 'media';
+
+    if(strlen($_POST['mediaName']) > 0) {
+      $documentName = $_POST['mediaName'];
+    }
+
+    if(strlen($_POST['existingMediaName']) > 0) {
+      $documentName = $_POST['existingMediaName'];
+    }
+
+    $docName = $documentName;
+    echo $docName;
+    $documentName = str_replace(" ", "_", $documentName);
+    echo $documentName;
+
+    writeToJSON($uploadType, $docName, $documentName, $ext);
 
   } else if((isset($_POST['documentName']) && isset($_POST['class']))) {
     // for results
@@ -70,8 +49,6 @@
     $className = $_POST['class'];
     $documentName = $_POST['documentName'];
     $eventName = $documentName;
-    $fileName = $_POST['fileuploader-list-files'];
-    $ext = substr(pathinfo($fileName, PATHINFO_EXTENSION), 0, -2);
 
     // replace all spaces with _
     $documentName = str_replace(" ", "_", $documentName);
@@ -140,3 +117,27 @@
 		$filename = $data['files'][0]['name'];
     echo '<p class="success-message">Covfefe. '.$filename.' successfully added!</p>';
 	}
+
+  function writeToJSON($uploadType, $docName, $documentName, $ext) {
+    $path = "./assets/".$uploadType."-list.json";
+    $string = file_get_contents($path);
+    $json = json_decode($string, true);
+
+    $arr = array('./assets/documentation/'.$documentName.'.'.$ext);
+    $document_details = array('filePaths' => $arr);
+    $toEncode = array($docName => $document_details);
+
+    if(!empty($json)) {
+      // class/category does not exist in result list
+      if(!isset($json[$docName])) {
+        $edited_json = array_merge($json, $toEncode);
+        file_put_contents($path, json_encode($edited_json));
+      } else {
+        // add entry to existing class/category
+        array_push($json[$docName]['filePaths'], './assets/'.$uploadType.'/'.$documentName.'.'.$ext);
+        file_put_contents($path, json_encode($json));
+      }
+    } else {
+      file_put_contents($path, json_encode($toEncode));
+    }
+  }

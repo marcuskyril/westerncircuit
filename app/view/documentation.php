@@ -25,38 +25,41 @@
 
       <main>
         <div class="standard-content">
-          <table width="100%">
-            <tbody>
-              <tr>
-                <th>Document</th>
-                <th>Download(s)</th>
-              </tr>
+          <div class="documentation-list">
 
-              <?php
-                $json_string = file_get_contents("./assets/documentation-list.json");
-                $json = json_decode($json_string, true);
+            <table width="100%">
+              <tbody>
+                <tr>
+                  <th>Document</th>
+                  <th>Download(s)</th>
+                </tr>
 
-                foreach ($json as $documentName => $filePaths) {
-                  echo '<tr><td>'.$documentName.'</td><td>';
+                <?php
+                  $json_string = file_get_contents("./assets/documentation-list.json");
+                  $json = json_decode($json_string, true);
 
-                  foreach ($filePaths['filePaths'] as $filePath) {
+                  foreach ($json as $documentName => $filePaths) {
+                    echo '<tr><td>'.$documentName.'</td><td>';
 
-                    $fileType = substr(strrchr($filePath,'.'),1);
+                    foreach ($filePaths['filePaths'] as $filePath) {
 
-                    $iconArr = array(
-                                    "pdf" => "fa fa-file-pdf-o",
-                                    "doc" => "fa fa-file-word-o",
-                                    "docx" => "fa fa-file-word-o"
-                                  );
+                      $fileType = substr(strrchr($filePath,'.'),1);
 
-                    echo '<a href="'.$filePath.'"><i class="'.$iconArr[$fileType].'"></i></a>';
+                      $iconArr = array(
+                                      "pdf" => "fa fa-file-pdf-o",
+                                      "doc" => "fa fa-file-word-o",
+                                      "docx" => "fa fa-file-word-o"
+                                    );
+
+                      echo '<a href="'.$filePath.'"><i class="'.$iconArr[$fileType].'"></i></a>';
+                    }
+
+                    echo '</td></tr>';
                   }
-
-                  echo '</td></tr>';
-                }
-              ?>
-              </tbody>
-            </table>
+                ?>
+                </tbody>
+              </table>
+            </div>
         </div>
       </main>
 
