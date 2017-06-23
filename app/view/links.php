@@ -4,6 +4,7 @@
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
 	  <title>Links</title>
 	  <link rel="stylesheet" href="./assets/dist/app.css">
+    <link rel='shortcut icon' type='image/x-icon' href="assets/img/favicon/favicon.ico">
   </head>
   <body>
 	  <div class="standard-page" id="app">
@@ -30,7 +31,7 @@
             <div class="col-lg-4">
               <a href="javascript:void(0);">
                 <div class="card organizer-wrapper">
-                  <img src="./img/raffles_marina_logo.png" alt="SMU" />
+                  <img src="./assets/img/raffles_marina_logo.png" alt="SMU" />
                   <div class="organizer-content">
                     <p>Raffles Marina</p>
                   </div>
@@ -41,7 +42,7 @@
             <div class="col-lg-4">
               <a href="javascript:void(0);">
                 <div class="card organizer-wrapper">
-                <img src="./img/SMU_Verticle_L.png" alt="SMU" />
+                <img src="./assets//img/SMU_Verticle_L.png" alt="SMU" />
                   <div class="organizer-content">
                     <p>SMU</p>
                   </div>
@@ -52,7 +53,7 @@
             <div class="col-lg-4">
               <a href="javascript:void(0);">
                 <div class="card organizer-wrapper">
-                  <img src="./img/sailing-logo-round.png" alt="SMU Sailing" />
+                  <img src="./assets/img/sailing-logo-round.png" alt="SMU Sailing" />
                   <div class="organizer-content">
                     <p>SMU Sailing Club</p>
                   </div>

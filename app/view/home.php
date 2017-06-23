@@ -4,6 +4,7 @@
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
 	  <title>Homepage</title>
 	  <link rel="stylesheet" href="./assets/dist/app.css">
+    <link rel='shortcut icon' type='image/x-icon' href="assets/img/favicon/favicon.ico">
   </head>
   <body>
 	  <div class="standard-page" id="app">
@@ -27,11 +28,13 @@
                 <div class="text-wrapper">
                   <h2>About us</h2>
                   <p>
-                    Supported by the Singapore Sailing Federation (SSF),
-                    the SMU-RM Western Circuit Sailing Regatta is one of
-                    the largest keelboat sailing events and has become well
-                    known for its tactically challenging race courses and
-                    fun-filled post-race parties.
+                    Western Circuit Sailing Regatta is back for 2017! Jointly organized by Singapore Management University (SMU) and Raffles Marina (RM), expect exciting races, tight competition and fun-filled post race parties on the 19th, 20th and 26th of August at one of Singapore's biggest keelboat events!
+                  </p>
+                  <p>
+                    So mark your calendars, hoist your mainsails, and prepare for three exciting days of regatta off the coast of Raffles Marina!
+                  </p>
+                  <p>
+                    <a href="https://www.facebook.com/SMUsailingclub/">Find out more about us! <i class="fa fa-arrow-right"></i></a>
                   </p>
                 </div>
               </div>
@@ -57,9 +60,7 @@
             <div class="col-lg-3 col-sm-12">
               <div class="content align-center">
                 <div class="text-wrapper">
-                  <h2>Test</h2>
-                  <p>La preuve que le petit prince a existé c’est qu’il était ravissant, qu’il riait,
-                    et qu’il voulait un mouton.</p>
+                  <h2><a href="/documentation">Sign Up Information <i class="fa fa-arrow-right"></i></a></h2>
                 </div>
               </div>
             </div>
@@ -69,9 +70,7 @@
             <div class="col-lg-3 col-sm-12">
               <div class="content align-center">
                 <div class="text-wrapper">
-                  <h2>Test</h2>
-                  <p>La preuve que le petit prince a existé c’est qu’il était ravissant, qu’il riait,
-                    et qu’il voulait un mouton.</p>
+                  <h2><a href="https://www.facebook.com/SMU.RM.WCSR/">Find out more about us! <i class="fa fa-arrow-right"></i></a></h2>
                 </div>
               </div>
             </div>

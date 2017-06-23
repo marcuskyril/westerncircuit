@@ -4,28 +4,14 @@
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
 	  <title>Dashboard</title>
 	  <link rel="stylesheet" href="./assets/dist/app.css">
+    <link rel='shortcut icon' type='image/x-icon' href="assets/img/favicon/favicon.ico">
   </head>
   <body>
     <?php
-
       // read json files
+      include('../app/view/upload_config/class.fileuploader.php');
       $class_list_string = file_get_contents("./assets/class-list.json");
-      $entry_list_string = file_get_contents("./assets/entry-list-2017.json");
-
-      // function to format strings to camel case
-      function camelCase($str, array $noStrip = []) {
-        // non-alpha and non-numeric characters and apostrophes become spaces
-        $str = str_replace("'", "", $str);
-        $str = preg_replace('/[^a-z0-9' . implode("", $noStrip) . ']+/i', ' ', $str);
-        $str = trim($str);
-        // uppercase the first character of each word
-        $str = ucwords($str);
-
-        $str = str_replace(" ", "", $str);
-        $str = lcfirst($str);
-
-        return $str;
-      }
+      $entry_list_string = file_get_contents("./assets/entry-list-config/entry-list-2017.json");
     ?>
 
 	  <div class="standard-page" id="app">
@@ -46,6 +32,8 @@
 
       <main>
         <div class="standard-content">
+
+          <?php include('../app/view/upload_config/upload.php'); ?>
 
           <section>
             <h2>Create Category</h2>
@@ -82,17 +70,11 @@
 
     				<form id="entryForm" action="#" method="post">
               <div class="input-group">
-                <select name="class">
-                  <option name="default" value="">Select class</option>
-                  <?php
-                    // $json_string = file_get_contents("./assets/class-list.json");
-                    $json = json_decode($class_list_string, true);
 
-                    foreach($json as $key => $value) {
-                      echo '<option value="'.$value['name'].'">'.$value['name'].'</option>';
-                    }
-                  ?>
-                </select>
+                <?php
+                  renderClassList();
+                ?>
+
                 <input type="text" placeholder="Sail ID" name="sailID" required />
                 <input type="text" placeholder="Yacht Name" name="yachtName" required />
                 <input type="text" placeholder="Skipper Name" name="skipperName" required />
@@ -104,7 +86,7 @@
 
           <?php
             $entry_list_json = json_decode($entry_list_string, true);
-            $path = './assets/entry-list-2017.json';
+            $path = './assets/entry-list-config/entry-list-2017.json';
 
             if(isset($_POST['sailID']) && isset($_POST['yachtName']) && isset($_POST['skipperName'])) {
               $className = $_POST['class'];
@@ -136,25 +118,63 @@
 
           <hr />
           <section>
-            <h2>Upload File</h2>
+            <h2>Upload Documentation</h2>
+
+            <form id="doc-upload-form" action="#" method="post" enctype="multipart/form-data">
+              <div class="input-group">
+                <div class="doc-toggle">
+                  <a class="active" id="new-doc" href="javascript:void(0)">Add to new folder</a> | <a id="existing-doc" href="javascript:void(0)">Add to existing folder</a>
+                </div>
+                <input type="text" name="documentName" placeholder="Document name" required />
+                <?php
+                  renderDocumentationList();
+                ?>
+                <input type="file" name="files[]" required>
+                <button class="btn" type="submit">Submit</button>
+              </div>
+        		</form>
+          </section>
+
+          <hr />
+
+          <section>
+            <h2>Upload Media</h2>
+
+            <form id="media-upload-form" action="#" method="post" enctype="multipart/form-data">
+              <div class="input-group">
+                <div class="media-toggle">
+                  <a class="active" id="new-media" href="javascript:void(0)">Add to new folder</a> | <a id="existing-media" href="javascript:void(0)">Add to existing folder</a>
+                </div>
+                <input type="text" name="mediaName" placeholder="Media name" required />
+                <?php
+                  renderMediaList();
+                ?>
+                <input type="file" name="files[]" required>
+                <button class="btn" type="submit">Submit</button>
+              </div>
+        		</form>
+          </section>
+
+          <hr />
+
+          <section>
+            <h2>Upload Results</h2>
 
             <form action="#" method="post" enctype="multipart/form-data">
               <div class="input-group">
                 <input type="text" name="documentName" placeholder="Document name" required />
-                <select name="uploadType" id="documentType" required>
-                  <option value="">Select document type</option>
-                  <option value="media">Media</option>
-                  <option value="results">Results</option>
-                  <option value="documentation">Documentation</option>
-                </select>
+                <?php
+                  renderClassList();
+                ?>
           			<input type="file" name="files[]" required>
                 <button class="btn" type="submit">Submit</button>
               </div>
         		</form>
-            <?php include('../app/view/upload_config/upload.php'); ?>
+
           </section>
 
           <hr />
+
           <section>
             <div class="input-group">
               <button id="logout" class="btn">Logout</button>
@@ -171,3 +191,44 @@
 
   </body>
 </html>
+
+<?php
+
+  function renderDocumentationList() {
+    $documentation_list_string = file_get_contents("./assets/documentation-list.json");
+    $documentation_list_json = json_decode($documentation_list_string, true);
+
+    echo '<select id="documentation-list" name="documentName"><option name="default" value="">Select document</option>';
+
+    foreach ($documentation_list_json as $key => $value) {
+      echo '<option value="'.$key.'">'.$key.'</option>';
+    }
+    echo '</select>';
+  }
+
+  function renderMediaList() {
+    $media_list_string = file_get_contents("./assets/media-list.json");
+    $media_list_json = json_decode($media_list_string, true);
+
+    echo '<select id="media-list" name="media"><option name="default" value="">Select media</option>';
+
+    foreach ($media_list_json as $key => $value) {
+      echo '<option value="'.$key.'">'.$key.'</option>';
+    }
+    echo '</select>';
+  }
+
+  function renderClassList() {
+    $class_list_string = file_get_contents("./assets/class-list.json");
+    $json = json_decode($class_list_string, true);
+
+    echo '<select name="class"><option name="default" value="">Select class</option>';
+
+    foreach($json as $key => $value) {
+      echo '<option value="'.$value['name'].'">'.$value['name'].'</option>';
+    }
+
+    echo '</select>';
+  }
+
+?>

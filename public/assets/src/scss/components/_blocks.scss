@@ -9,6 +9,14 @@
 #gallery .content {
   background: $body-copy-grey;
   color: $white;
+
+  a {
+    color: $white;
+  }
+
+  a:hover {
+    color: $yellow;
+  }
 }
 
 #sec-content,
@@ -51,6 +59,15 @@
     width: 0;
     padding-top: 100%;
   }
+
+  a {
+    color: $blue;
+  }
+
+  a:hover {
+    color: $body-copy-grey;
+  }
+
 }
 
 .block-img {

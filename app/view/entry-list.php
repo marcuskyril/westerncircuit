@@ -4,6 +4,7 @@
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
 	  <title>Entry List</title>
 	  <link rel="stylesheet" href="./assets/dist/app.css">
+    <link rel='shortcut icon' type='image/x-icon' href="assets/img/favicon/favicon.ico">
   </head>
   <body>
 	  <div class="standard-page" id="app">
@@ -47,7 +48,7 @@
 
 <?php
   function render_table($year) {
-    $json_string = file_get_contents("./assets/entry-list-".$year.".json");
+    $json_string = file_get_contents("./assets/entry-list-config/entry-list-".$year.".json");
     $json = json_decode($json_string, true);
 
     if($year === "2017") {

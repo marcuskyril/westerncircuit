@@ -69,6 +69,11 @@
 	}
 }
 
+.nice-select.open .list {
+		max-height: 250px;
+		overflow-y: scroll;
+}
+
 label {
 	display: block;
 	padding-bottom: 7px;

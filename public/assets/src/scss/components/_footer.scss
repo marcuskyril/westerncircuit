@@ -20,12 +20,12 @@
 		font-size: 14px;
  	}
 
-	.show-md-down {
-		display: inline;
+	br {
+		display: block;
 	}
 
 	@include grid-media($md-grid) {
-		.show-md-down {
+		br {
 			display: none;
 		}
 	}

@@ -4,6 +4,7 @@
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
 	  <title>Gallery</title>
 	  <link rel="stylesheet" href="./assets/dist/app.css">
+    <link rel='shortcut icon' type='image/x-icon' href="assets/img/favicon/favicon.ico">
   </head>
   <body>
 	  <div class="standard-page" id="app">
