@@ -271,6 +271,7 @@ a#new-media.active, a#new-doc.active, a#existing-media.active, a#existing-doc.ac
   opacity: 1;
 }
 
-#doc-upload-form .nice-select, #media-upload-form .nice-select {
+#doc-upload-form .nice-select-container,
+#media-upload-form .nice-select-container {
 	display: none;
 }
