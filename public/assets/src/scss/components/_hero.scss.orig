@@ -1,4 +1,3 @@
-
 .hero-container, .four-oh-four-container {
 	height: 100vh;
 	overflow: hidden;
