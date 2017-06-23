@@ -246,6 +246,15 @@ blockquote {
 	}
 }
 
+i.fa.fa-envelope-o {
+  margin-left: 5px;
+  color: $blue;
+
+	&:hover {
+		color: $body-copy-grey;
+	}
+}
+
 .image-showcase {
 	img {
 		width: 100%;
@@ -274,4 +283,33 @@ a#new-media.active, a#new-doc.active, a#existing-media.active, a#existing-doc.ac
 #doc-upload-form .nice-select-container,
 #media-upload-form .nice-select-container {
 	display: none;
+}
+
+.contact {
+  @at-root {
+    #{&}-thumbnail, #{&}-content {
+      display: block;
+      width: 100%;
+      vertical-align: middle;
+
+      img {
+        width: 100%;
+        padding-right: 20px;
+      }
+
+			@include grid-media($md-grid) {
+				width: 50%;
+				display: table-cell;
+			}
+    }
+
+    #{&}-content {
+      width: 100%;
+
+			@include grid-media($md-grid) {
+				width: 50%;
+			}
+    }
+
+  }
 }

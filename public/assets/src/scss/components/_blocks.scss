@@ -60,12 +60,29 @@
     padding-top: 100%;
   }
 
+  &:hover {
+    border: 20px solid $divider-grey;
+    transition: all 0.2s ease-out;
+  }
+
   a {
     color: $blue;
   }
 
   a:hover {
     color: $body-copy-grey;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+
+  p {
+    font-size: 14px;
+
+    @include grid-media($md-grid) {
+  		font-size: 20px;
+  	}
   }
 
 }
@@ -96,10 +113,18 @@
   background-image: url('../../../assets/img/carousel/carousel_img_1.jpg');
 }
 
+#img-rm {
+  background-image: url('../../../assets/img/raffles-marina-lighthouse.jpg');
+}
+
+#img-smu {
+  background-image: url('../../../assets/img/The_2nd_Asia_Pacific_Student_Cup.png');
+}
+
 .text-wrapper {
   position: absolute;
-  width: 60%;
+  width: 70%;
   top: 50%;
-  left: 20%;
+  left: 15%;
   transform: translateY(-50%);
 }

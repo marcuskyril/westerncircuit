@@ -7995,6 +7995,15 @@ blockquote {
   }
 }
 
+i.fa.fa-envelope-o {
+  margin-left: 5px;
+  color: #3f4fa0;
+}
+
+i.fa.fa-envelope-o:hover {
+  color: #333333;
+}
+
 .image-showcase img {
   width: 100%;
 }
@@ -8021,6 +8030,34 @@ a#new-media.active, a#new-doc.active, a#existing-media.active, a#existing-doc.ac
 #doc-upload-form .nice-select-container,
 #media-upload-form .nice-select-container {
   display: none;
+}
+
+.contact-thumbnail, .contact-content {
+  display: block;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.contact-thumbnail img, .contact-content img {
+  width: 100%;
+  padding-right: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .contact-thumbnail, .contact-content {
+    width: 50%;
+    display: table-cell;
+  }
+}
+
+.contact-content {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .contact-content {
+    width: 50%;
+  }
 }
 
 @font-face {
@@ -8448,12 +8485,31 @@ section#intro > :after, section#gallery > :after, section#sec-content > :after {
   padding-top: 100%;
 }
 
+.content:hover {
+  border: 20px solid #dddddd;
+  transition: all 0.2s ease-out;
+}
+
 .content a {
   color: #3f4fa0;
 }
 
 .content a:hover {
   color: #333333;
+}
+
+.content h2 {
+  font-size: 25px;
+}
+
+.content p {
+  font-size: 14px;
+}
+
+@media only screen and (min-width: 768px) {
+  .content p {
+    font-size: 20px;
+  }
 }
 
 .block-img {
@@ -8482,11 +8538,19 @@ section#intro > :after, section#gallery > :after, section#sec-content > :after {
   background-image: url("../../../assets/img/carousel/carousel_img_1.jpg");
 }
 
+#img-rm {
+  background-image: url("../../../assets/img/raffles-marina-lighthouse.jpg");
+}
+
+#img-smu {
+  background-image: url("../../../assets/img/The_2nd_Asia_Pacific_Student_Cup.png");
+}
+
 .text-wrapper {
   position: absolute;
-  width: 60%;
+  width: 70%;
   top: 50%;
-  left: 20%;
+  left: 15%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
@@ -8740,6 +8804,18 @@ th {
 
 .entry h2 {
   text-transform: uppercase;
+}
+
+.entry-list table td:first-child {
+  width: 20%;
+}
+
+.entry-list table td:nth-child(2) {
+  width: 40%;
+}
+
+.result-list table td:first-child, .media-list table td:first-child, .documentation-list table td:first-child {
+  width: 70%;
 }
 
 .classic-form__btn-group {
@@ -9283,22 +9359,33 @@ textarea {
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-image: url("../../../assets/img/mobile-water.jpg");
+  opacity: 0.5;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-container .hero-img, .four-oh-four-container .hero-img {
+    display: none;
+    opacity: 1;
+  }
 }
 
 .hero-container .fullscreen-bg__video, .four-oh-four-container .fullscreen-bg__video {
-  width: 100vw;
-  height: 100vh;
-  -o-object-fit: cover;
-     object-fit: cover;
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  z-index: -1;
-  display: block;
+  display: none;
 }
 
-.hero-container .img-no-frills, .four-oh-four-container .img-no-frills {
-  background-image: url("../../../img/hero.jpg");
+@media only screen and (min-width: 768px) {
+  .hero-container .fullscreen-bg__video, .four-oh-four-container .fullscreen-bg__video {
+    width: 100vw;
+    height: 100vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    display: block;
+  }
 }
 
 .hero-container .hero-logo, .four-oh-four-container .hero-logo {
@@ -9460,6 +9547,19 @@ h1#hero-text {
 .footer-primary .footer-links img, .footer-primary .footer-logo img {
   height: 45px;
   margin: 15px;
+}
+
+.footer-primary .footer-links.footer-right, .footer-primary .footer-links.footer-left, .footer-primary .footer-logo.footer-right, .footer-primary .footer-logo.footer-left {
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .footer-primary .footer-links.footer-right, .footer-primary .footer-logo.footer-right {
+    text-align: left;
+  }
+  .footer-primary .footer-links.footer-left, .footer-primary .footer-logo.footer-left {
+    text-align: right;
+  }
 }
 
 .footer-secondary {
@@ -9662,50 +9762,6 @@ h1#hero-text {
 .landing__banner-bar h1 {
   color: #ffffff;
   margin: 0;
-}
-
-.table-content-tab .table-content-tab__hdr {
-  background: #f7f7f7;
-}
-
-@media only screen and (min-width: 320px) {
-  .table-content-tab .table-content-tab__hdr {
-    overflow: hidden;
-  }
-}
-
-.table-content-tab .table-content-tab__hdr .table-content-tab__item {
-  padding: 18px 0 15px;
-  -webkit-filter: contrast(0) brightness(1.7);
-          filter: contrast(0) brightness(1.7);
-}
-
-.table-content-tab .table-content-tab__hdr .table-content-tab__item span {
-  display: none;
-}
-
-@media only screen and (min-width: 768px) {
-  .table-content-tab .table-content-tab__hdr .table-content-tab__item span {
-    display: block;
-  }
-}
-
-.table-content-tab .table-content-tab__hdr .active {
-  background: #ffffff;
-  -webkit-filter: none;
-          filter: none;
-}
-
-.table-content-tab .table-content-tab__hdr:hover {
-  cursor: pointer;
-}
-
-.table-content-tab .table-content-tab__details {
-  display: none;
-}
-
-.table-content-tab .table-content-tab__details.active {
-  display: block;
 }
 
 .tabs {

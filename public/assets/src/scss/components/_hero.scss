@@ -3,6 +3,7 @@
 	overflow: hidden;
 
 	.hero-img {
+
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -12,21 +13,29 @@
 		background-position: bottom center;
 		background-repeat: no-repeat;
 		background-size: cover;
+		background-image: url('../../../assets/img/mobile-water.jpg');
+		opacity: 0.5;
+
+		@include grid-media($md-grid) {
+			display: none;
+			opacity: 1;
+		}
 	}
 
 	.fullscreen-bg__video {
-		width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    position: fixed;
-    left: 0px;
-    top: 0px;
-    z-index: -1;
-		display: block;
-	}
 
-	.img-no-frills {
-		background-image: url('../../../img/hero.jpg');
+		display: none;
+
+		@include grid-media($md-grid) {
+			width: 100vw;
+	    height: 100vh;
+	    object-fit: cover;
+	    position: fixed;
+	    left: 0px;
+	    top: 0px;
+	    z-index: -1;
+			display: block;
+		}
 	}
 
 	.hero-logo {

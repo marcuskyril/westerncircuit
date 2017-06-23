@@ -8,6 +8,20 @@
 			height: 45px;
 			margin: 15px;
 		}
+
+		&.footer-right, &.footer-left {
+			text-align: center;
+		}
+
+		@include grid-media($md-grid) {
+			&.footer-right {
+				text-align: left;
+			}
+
+			&.footer-left {
+				text-align: right;
+			}
+		}
 	}
 }
 

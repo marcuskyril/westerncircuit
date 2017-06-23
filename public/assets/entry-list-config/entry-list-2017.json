@@ -1,7 +1,7 @@
 {
     "IRC A": [{
-        "sailID": "asfasfa",
-        "yachtName": "asfasfa",
-        "skipperName": "asfasf"
+        "sailID": "SailID",
+        "yachtName": "Yacht Name",
+        "skipperName": "Skipper Name"
     }]
 }

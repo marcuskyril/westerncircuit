@@ -1,17 +1,8 @@
 {
-    "Notice of Race 2016": {
-        "filePaths": [".\/assets\/documentation\/19th WCSR Notice of Race.docx"]
+    "20th WCSR Notice of Race": {
+        "filePaths": [".\/assets\/documentation\/20th_WCSR_Notice_of_Race.pdf"]
     },
-    "19th WCSR Online Course Book": {
-        "filePaths": [".\/assets\/documentation\/19th WCSR Course Book V7.compressed.pdf"]
-    },
-    "19th WCSR Official Entry Forms": {
-        "filePaths": [".\/assets\/documentation\/19th WCSR 2016 Official Entry Form.docx", ".\/assets\/documentation\/19th WCSR 2016 Official Entry Form.pdf"]
-    },
-    "19th WCSR Boat Charter Form SB20": {
-        "filePaths": [".\/assets\/documentation\/19th WCSR 2016 Official Entry Form.docx"]
-    },
-    "19th WCSR Sailing Instructions": {
-        "filePaths": [".\/assets\/documentation\/19th WCSR Sailing Instructions _2_.pdf"]
+    "20th WCSR Official Entry Form": {
+        "filePaths": [".\/assets\/documentation\/20th_WCSR_Official_Entry_Form.pdf"]
     }
 }
