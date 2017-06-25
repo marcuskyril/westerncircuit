@@ -2,6 +2,8 @@
 // Grabs the URI and breaks it apart in case we have querystring stuff
 $request_uri = explode('?', $_SERVER['REQUEST_URI'], 2);
 
+// print_r ($request_uri);
+
 $routes = array(
                 "/" => "home",
                 "/contact" => "contact",
