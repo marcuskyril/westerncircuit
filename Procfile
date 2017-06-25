@@ -1,1 +1,0 @@
-web: public_html/
