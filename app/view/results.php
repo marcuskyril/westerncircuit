@@ -26,14 +26,14 @@
       <main>
         <div class="standard-content">
           <ul class="tabs">
-            <li><a href="#2017">2017</a></li>
+            <!-- <li><a href="#2017">2017</a></li> -->
             <li class="active"><a href="#2016">2016</a></li>
             <li><a href="#2015">2015</a></li>
           </ul>
 
           <?php
 
-            render_table("2017");
+            // render_table("2017");
             render_table("2016");
             render_table("2015");
 

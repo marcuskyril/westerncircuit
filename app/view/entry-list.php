@@ -27,13 +27,13 @@
         <div class="standard-content">
 
           <ul class="tabs">
-            <li class="active"><a href="#2017">2017</a></li>
-            <li><a href="#2016">2016</a></li>
-            <li><a href="#2016">2015</a></li>
+            <!-- <li class="active"><a href="#2017">2017</a></li> -->
+            <li class="active"><a href="#2016">2016</a></li>
+            <!-- <li><a href="#2016">2015</a></li> -->
           </ul>
 
           <?php
-            render_table("2017");
+            // render_table("2017");
             render_table("2016");
           ?>
         </div>
@@ -51,7 +51,7 @@
     $json_string = file_get_contents("./assets/entry-list-config/entry-list-".$year.".json");
     $json = json_decode($json_string, true);
 
-    if($year === "2017") {
+    if($year === "2016") {
       echo '<div id="'.$year.'" class="tabs-content entry-list active">';
     }  else {
       echo '<div id="'.$year.'" class="tabs-content entry-list">';

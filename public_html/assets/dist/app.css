@@ -9001,6 +9001,18 @@ textarea {
   content: '';
 }
 
+.nav-scroll {
+  text-align: center;
+  max-height: 450px;
+  overflow-x: scroll;
+}
+
+@media only screen and (min-width: 768px) {
+  .nav-scroll {
+    max-height: 600px;
+  }
+}
+
 .breadcrumb {
   padding: 0;
   margin-bottom: 55px;

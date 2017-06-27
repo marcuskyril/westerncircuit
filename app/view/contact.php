@@ -39,7 +39,7 @@
               <a href="fidelistan@smu.edu.sg"><i class="fa fa-envelope-o"></i></a>
             </p>
             <p>Assistant Manager</br>
-              Office of Student Life
+              Office of Dean of Students
             </p>
             <p>
               Singapore Management University</br>

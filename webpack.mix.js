@@ -11,8 +11,8 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('public/assets/src/js/app.js', 'public/assets/dist/')
-   .sass('public/assets/src/scss/app.scss', 'public/assets/dist/')
+mix.js('public_html/assets/src/js/app.js', 'public_html/assets/dist/')
+   .sass('public_html/assets/src/scss/app.scss', 'public_html/assets/dist/')
    .options({
       processCssUrls: false
    });;

@@ -33,3 +33,13 @@
 .accordion__header.no-arrow:after {
     content: '';
 }
+
+.nav-scroll {
+	text-align: center;
+	max-height: 450px;
+	overflow-x: scroll;
+
+	@include grid-media($md-grid) {
+		max-height: 600px;
+	}
+}
