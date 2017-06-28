@@ -60,13 +60,14 @@
     padding-top: 100%;
   }
 
-  &:hover {
-    border: 20px solid $divider-grey;
-    transition: all 0.2s ease-out;
-  }
+  // &:hover {
+  //   border: 20px solid $divider-grey;
+  //   transition: all 0.2s ease-out;
+  // }
 
   a {
-    color: $blue;
+    color: $caption-grey;
+    font-weight: bold;
   }
 
   a:hover {
@@ -75,6 +76,12 @@
 
   h2 {
     font-size: 25px;
+    margin-bottom: 10px;
+    font-weight: 500;
+
+    a {
+      font-weight: 500;
+    }
   }
 
   p {

@@ -25,49 +25,18 @@
 
       <section>
         <div class="standard-content">
-          <div class="media-list">
 
-    				<table width="100%">
-              <tbody>
-                <tr>
-                  <th>
-                    Document
-                  </th>
-                  <th>
-                    Download(s)
-                  </th>
-                </tr>
+          <ul class="tabs">
+            <!-- <li class="active"><a href="#2017">2017</a></li> -->
+            <li class="active"><a href="#2016">2016</a></li>
+            <!-- <li><a href="#2016">2015</a></li> -->
+          </ul>
 
-                <tr>
-                  <?php
-                      $json_string = file_get_contents("./assets/media-list.json");
-                      $json = json_decode($json_string, true);
+          <?php
+            // render_table("2017");
+            render_table("2016");
+          ?>
 
-                      foreach ($json as $documentName => $filePaths) {
-                        echo '<tr><td>'.$documentName.'</td><td>';
-
-                        foreach ($filePaths['filePaths'] as $filePath) {
-
-                          $fileType = substr(strrchr($filePath,'.'),1);
-
-                          $iconArr = array(
-                                          "pdf" => "fa fa-file-pdf-o",
-                                          "doc" => "fa fa-file-word-o",
-                                          "docx" => "fa fa-file-word-o"
-                                        );
-
-                          echo '<a href="'.$filePath.'"><i class="'.$iconArr[$fileType].'"></i></a>';
-                        }
-
-                        echo '</td></tr>';
-                      }
-                  ?>
-
-                </tr>
-
-              </tbody>
-            </table>
-          </div>
         </div>
       </section>
 
@@ -77,3 +46,38 @@
 	  <script src="./assets/dist/app.js"></script>
   </body>
 </html>
+
+<?php
+  function render_table($year) {
+    $json_string = file_get_contents("./assets/media-list-config/media-list-".$year.".json");
+    $json = json_decode($json_string, true);
+
+    if($year === "2016") {
+      echo '<div id="'.$year.'" class="tabs-content media-list active">';
+    }  else {
+      echo '<div id="'.$year.'" class="tabs-content media-list">';
+    }
+
+    echo '<table width="100%"><tbody>';
+    echo '<tr><th>Result</th><th>Download</th></tr>';
+
+    foreach ($json as $eventName => $resultList) {
+      foreach($resultList['filePaths'] as $location) {
+        $fileType = substr(strrchr($location,'.'),1);
+
+        $iconArr = array(
+                        "pdf" => "fa fa-file-pdf-o",
+                        "doc" => "fa fa-file-word-o",
+                        "docx" => "fa fa-file-word-o"
+                      );
+
+        echo '<tr><td>'.$eventName.'</td><td><a href="'.$location.'"><i class="'.$iconArr[$fileType].'"></i></a></td></tr>';
+
+      }
+    }
+
+    echo '</tbody></table>';
+    echo '</div>';
+
+  }
+?>

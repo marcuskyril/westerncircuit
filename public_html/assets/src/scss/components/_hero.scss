@@ -48,13 +48,18 @@
 }
 
 .hero-text {
-	z-index: 50;
-	top: 45%;
-	position: absolute;
-	right: 20;
-	color: black;
-	opacity: 0.6;
-	text-align: right;
+		z-index: 50;
+		top: 45%;
+		position: absolute;
+		right: 0;
+		color: black;
+		opacity: 0.6;
+		text-align: center;
+
+	@include grid-media($md-grid) {
+		right: 20;
+		text-align: right;
+	}
 }
 
 h1#hero-text {
