@@ -209,7 +209,7 @@
   }
 
   function renderMediaList() {
-    $media_list_string = file_get_contents("./assets/media-list.json");
+    $media_list_string = file_get_contents("./assets/media-list-config/media-list-2016.json");
     $media_list_json = json_decode($media_list_string, true);
 
     echo '<div class="nice-select-container"><select id="media-list" name="existingMediaName"><option name="default" value="">Select media</option>';

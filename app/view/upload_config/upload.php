@@ -77,7 +77,7 @@
 
   // route the file to the correct location
   $uploadDirArr = array(
-                  "media" => "./assets/media/",
+                  "media" => "./assets/media/media_2017/",
                   "documentation" => "./assets/documentation/",
                   "results" => "./assets/results/results_".$currentYear."/"
                 );
@@ -119,11 +119,19 @@
 	}
 
   function writeToJSON($uploadType, $docName, $documentName, $ext) {
-    $path = "./assets/".$uploadType."-list.json";
+
+    if($uploadType === 'documentation') {
+      $path = "./assets/documentation-list.json";
+      $filePath = './assets/documentation/'.$documentName.'.'.$ext;
+    } else {
+      $path = "./assets/media-list-config/media-list-2017.json";
+      $filePath = './assets/media/media_2017/'.$documentName.'.'.$ext;
+    }
+
+    $arr = array($filePath);
     $string = file_get_contents($path);
     $json = json_decode($string, true);
 
-    $arr = array('./assets/documentation/'.$documentName.'.'.$ext);
     $document_details = array('filePaths' => $arr);
     $toEncode = array($docName => $document_details);
 
@@ -134,7 +142,7 @@
         file_put_contents($path, json_encode($edited_json));
       } else {
         // add entry to existing class/category
-        array_push($json[$docName]['filePaths'], './assets/'.$uploadType.'/'.$documentName.'.'.$ext);
+        array_push($json[$docName]['filePaths'], $filePath);
         file_put_contents($path, json_encode($json));
       }
     } else {
