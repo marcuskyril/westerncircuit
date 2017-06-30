@@ -11,6 +11,7 @@ $routes = array(
   "/links" => "links",
   "/login" => "login",
   "/media" => "media",
+  "/news" => "news",
   "/results" => "results",
   "/schedule" => "schedule",
   "/sponsors" => "sponsors"

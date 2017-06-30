@@ -17,7 +17,7 @@
 			text-align: center;
 		}
 
-		@include grid-media($md-grid) {
+		@include grid-media($lg-grid) {
 			&.footer-right {
 				text-align: left;
 			}

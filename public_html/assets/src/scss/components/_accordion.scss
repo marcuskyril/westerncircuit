@@ -17,19 +17,32 @@
 	@at-root {
 		#{&}__header-menu {
 			background: $white !important;
+			padding: 15px !important;
 		}
 
 		#{&}__header {
 			position: relative;
 
 			display: block;
-			padding: 15px;
+			padding: 15px 100px 15px 15px;
 
-			background: #dedee4;
+			background: #f2f2f2;
 			color: $caption-grey;
 			font: 16px $font-pri;
 			font-weight: 700;
 			transition: background .3s ease-in-out;
+
+			&.gallery {
+				border-left: 4px solid #1f2533;
+
+				h2 {
+					font-size: 20px;
+
+					@include grid-media($md-grid) {
+						font-size: 22px;
+					}
+				}
+			}
 
 			&:hover {
 				cursor: pointer;
@@ -40,13 +53,17 @@
 				content: '\f054';
 
 				position: absolute;
-				right: 20px;
+				right: 33px;
 				top: 25px;
 
 				margin: auto;
 
 				font-family: $font-fa;
 				transition: transform .2s ease-in-out;
+
+				@include grid-media($md-grid) {
+					top: 20px;
+				}
 			}
 
 			&.no-arrow-on-md-up {
@@ -54,8 +71,8 @@
 				&:after {
 					@include grid-media($md-grid) {
 						display: none;
-			        }
-			    }
+	        }
+		    }
 			}
 		}
 
@@ -77,6 +94,7 @@
 .accordion__header.nested-header {
 	background: #fafafb;
 	color: #333;
+	border-left: none;
 }
 
 .accordion__body.nested-body {

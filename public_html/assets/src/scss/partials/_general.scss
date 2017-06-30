@@ -118,6 +118,22 @@ p.error-message {
 }
 
 // Visibility
+.hide-sm-down {
+	display: block;
+
+	@include grid-media($sm-grid) {
+		display: none;
+	}
+
+	@include grid-media($md-grid) {
+		display: block;
+	}
+
+	@include grid-media($lg-grid) {
+		display: block;
+	}
+}
+
 .show-sm-only {
 	display: block;
 
@@ -319,5 +335,14 @@ a#new-media.active, a#new-doc.active, a#existing-media.active, a#existing-doc.ac
 
 	table td, th {
 		width: 25%;
+	}
+}
+
+
+.contact hr {
+	display: block;
+
+	@include grid-media($lg-grid) {
+		display: none;
 	}
 }
